@@ -1,8 +1,9 @@
 import os
+import time
 
 import cv2
 from PyQt5 import QtGui, QtWidgets, QtCore
-from PyQt5.QtCore import QDir
+from PyQt5.QtCore import QDir, QTimer, QCoreApplication, QElapsedTimer
 from PyQt5.QtGui import QPainterPath, QRegion, QImage, QPixmap
 from PyQt5.QtWidgets import QMainWindow, QMenu, QStyle, QFileDialog
 import sys
@@ -18,6 +19,8 @@ class WebScreen(QMainWindow):
     def __init__(self):
         QMainWindow.__init__(self)
         self.ui = Ui_WebCam()
+        self.timer: QTimer = QTimer()
+        self.timer2 = QElapsedTimer()
         self.ui.setupUi(self)
         self.conf = ConfigApp("web.ini")
         self.properties: QCamProperties = None
@@ -25,7 +28,7 @@ class WebScreen(QMainWindow):
         # set control_bt callback clicked  function
         self.ui.play.clicked.connect(self.play)
         self.ui.stop.clicked.connect(self.stop)
-        self.ui.prev.clicked.connect(self.record)
+        self.ui.record.clicked.connect(self.record)
         self.settings = QSettingMedia(self.conf)
         self.cameras = []
         self.camera = None
@@ -34,7 +37,7 @@ class WebScreen(QMainWindow):
             self.cameras.append(WebCameraThread())
             self.cameras[i].set_name(f"webcam{i + 1}")
             self.setup_camera(self.cameras[i])
-            self.cameras[i].indice=i
+            self.cameras[i].indice = i
 
         for i in range(4, 8):
             self.cameras.append(WebCameraThread())
@@ -45,11 +48,9 @@ class WebScreen(QMainWindow):
 
         self.ui.comboCamera.activated[str].connect(self.on_change_camera)
         self.init_camera()
-
         self.camera = self.cameras[0]
 
     def setup_camera(self, cam):
-
         cam.image_update.connect(self.image_update)
         cam.properties_update.connect(self.properties_update)
         cam.finished.connect(self.on_stop)
@@ -81,15 +82,29 @@ class WebScreen(QMainWindow):
             self.camera = None
 
         index = self.ui.comboCamera.currentIndex()
+        self.ui.label_infos.setText("Détection en cours ...")
+        self.ui.play.setEnabled(False)
+        self.ui.stop.setEnabled(False)
+        self.ui.record.setEnabled(False)
+        self.ui.split.setEnabled(False)
         self.camera = self.cameras[index]
         self.play()
 
     def on_infos(self, text):
-        if text=="indisponible":
+        if text == "indisponible":
             self.ui.led.setPixmap(QtGui.QPixmap(":/icones/icones/media/led_rouge.png"))
-            self.stop()
-        if text=='disponible':
+            self.ui.play.setEnabled(False)
+            self.ui.stop.setEnabled(False)
+            self.ui.record.setEnabled(False)
+            self.ui.split.setEnabled(False)
+            self.ui.slider_saturation.setValue(0)
+            self.ui.slider_brillance.setValue(0)
+            self.ui.slider_contraste.setValue(0)
+        if text == 'disponible':
             self.ui.led.setPixmap(QtGui.QPixmap(":/icones/icones/media/led_verte.png"))
+            self.ui.record.setEnabled(True)
+            self.ui.split.setEnabled(True)
+
         self.ui.label_infos.setText(text)
 
     def on_elapsed(self, milli):
@@ -123,7 +138,7 @@ class WebScreen(QMainWindow):
         self.ui.play.setIcon(self.style().standardIcon(QStyle.SP_MediaPlay))
         self.ui.stop.setEnabled(False)
         self.ui.stop.setIcon(self.style().standardIcon(QStyle.SP_MediaStop))
-        self.ui.next.setEnabled(False)
+        self.ui.split.setEnabled(False)
 
         self.ui.pushButton_close.clicked.connect(self.close_window)
         self.ui.pushButton_maxi.clicked.connect(self.min_max_window)
@@ -140,8 +155,25 @@ class WebScreen(QMainWindow):
         self.ui.slider_contraste.valueChanged.connect(self.on_contraste)
         self.ui.slider_brillance.valueChanged.connect(self.on_brillance)
         self.ui.slider_saturation.valueChanged.connect(self.on_saturation)
-
         self.ratio = False
+        self.timer.timeout.connect(self.on_timer)
+
+    def set_infos(self, text):
+        self.infos_screen = text
+        style = "<p align=\"center\"><span style=\" font-size:22pt; font-style:italic; color:#aaaaff;\"><texte></span></p>"
+        style = style.replace("<texte>", text)
+        self.timer.start(20)
+        self.timer2.start()
+        self.ui.lbl_screen.setText(style)
+
+    def on_timer(self):
+        self.ui.lbl_screen.setText(self.infos_screen)
+        self.timer.stop()
+
+        while self.timer2.elapsed()<1100:
+            QCoreApplication.processEvents()
+
+        self.ui.lbl_screen.setText("")
 
     def min_max_window(self):
         if self.isMaximized():
@@ -195,14 +227,17 @@ class WebScreen(QMainWindow):
         self.ui.stop.setEnabled(True)
         if self.camera:
             self.camera.start()
+            self.set_infos("Démarrage")
 
     def stop(self):
         self.ui.led.setPixmap(QtGui.QPixmap(":/icones/icones/media/led_rouge.png"))
         self.ui.play.setEnabled(True)
         self.ui.stop.setEnabled(False)
-        self.ui.prev.setEnabled(True)
+        self.ui.record.setEnabled(True)
+        self.ui.split.setEnabled(False)
         if self.camera:
             self.camera.stop()
+            self.set_infos("Stop")
 
     def record(self):
         if self.camera:
@@ -213,24 +248,36 @@ class WebScreen(QMainWindow):
             self.ui.led.setPixmap(QtGui.QPixmap(":/icones/icones/media/led_orange.png"))
             self.camera.record(path)
             self.ui.play.setEnabled(False)
-            self.ui.prev.setEnabled(False)
+            self.ui.record.setEnabled(False)
+            self.set_infos("Enregistrement en cours ...")
 
     def on_stop(self):  # vient du thread
         self.blank_screen()
 
     def flip(self):
-        if self.camera.isRunning():
-            if self.ui.chk_inverse.isChecked():
-                self.camera.set_flip(True)
-            else:
-                self.camera.set_flip(False)
+        if self.camera:
+            if self.camera.isRunning():
+                if self.ui.chk_inverse.isChecked():
+                    self.camera.set_flip(True)
+                    self.set_infos("Mode Inversé")
+                else:
+                    self.camera.set_flip(False)
+                    self.set_infos("Mode Normal")
 
     def grey(self):
-        if self.camera.isRunning():
-            if self.ui.chk_grey.isChecked():
-                self.camera.set_gray(True)
-            else:
-                self.camera.set_gray(False)
+        if self.camera:
+            if self.camera.isRunning():
+                if self.ui.chk_grey.isChecked():
+                    self.camera.set_gray(True)
+                    self.ui.slider_saturation.setValue(2)
+                    self.conf.set_image("saturation", "2")
+
+                    self.set_infos("Mode Gris")
+                else:
+                    self.camera.set_gray(False)
+                    self.ui.slider_saturation.setValue(50)
+                    self.conf.set_image("saturation", "50")
+                    self.set_infos("Mode Couleur")
 
     def property_changed(self, name, value):
         style = "<p><name>  : <span style=\" color:#aaaaff;\"><value></span></p>"
@@ -270,6 +317,7 @@ class WebScreen(QMainWindow):
         path = dir + "/" + filename
         if self.camera:
             self.camera.capture(path)
+            self.set_infos("Capture écran")
 
     def context_menu(self):
         menu = QMenu()
