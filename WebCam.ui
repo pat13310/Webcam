@@ -970,6 +970,34 @@ color:white;
               <bool>true</bool>
              </property>
             </widget>
+            <widget class="QLabel" name="lbl_screen">
+             <property name="geometry">
+              <rect>
+               <x>195</x>
+               <y>500</y>
+               <width>486</width>
+               <height>81</height>
+              </rect>
+             </property>
+             <property name="font">
+              <font>
+               <pointsize>-1</pointsize>
+               <italic>true</italic>
+              </font>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">background-color: transparent;
+color:rgb(170, 170, 255);
+font-style:italic;
+font-size:28px;</string>
+             </property>
+             <property name="text">
+              <string/>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignCenter</set>
+             </property>
+            </widget>
            </widget>
           </item>
          </layout>
@@ -1073,7 +1101,7 @@ border: 1px solid rgb(68, 0, 102);
           </widget>
          </item>
          <item row="1" column="3">
-          <widget class="QPushButton" name="next">
+          <widget class="QPushButton" name="split">
            <property name="minimumSize">
             <size>
              <width>60</width>
@@ -1248,7 +1276,7 @@ border-radius: 4px;
           </widget>
          </item>
          <item row="1" column="2">
-          <widget class="QPushButton" name="prev">
+          <widget class="QPushButton" name="record">
            <property name="minimumSize">
             <size>
              <width>60</width>
