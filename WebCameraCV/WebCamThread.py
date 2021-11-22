@@ -98,15 +98,14 @@ class WebCameraThread(QThread):
         ret, self.frame = cap.read()
 
         if ret:
-            image = cv2.cvtColor(self.frame, cv2.COLOR_BGR2RGB)
-            height, width, channel = image.shape
-
+            self.image = cv2.cvtColor(self.frame, cv2.COLOR_BGR2RGB)
+            height, width, channel = self.image.shape
             step = channel * width
             if self.flip:
-                image = cv2.flip(image, 1)
-                qImg = QImage(image.data, width, height, step, QImage.Format_RGB888)
+                imageflip = cv2.flip(self.image, 1)
+                qImg = QImage(imageflip.data, width, height, step, QImage.Format_RGB888)
             else:
-                qImg = QImage(image.data, width, height, step, QImage.Format_RGB888)
+                qImg = QImage(self.image.data, width, height, step, QImage.Format_RGB888)
 
             self.image_update.emit(qImg)
 
