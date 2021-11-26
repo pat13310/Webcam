@@ -65,12 +65,13 @@ class WebScreen(QMainWindow):
 
         self.desktop = QtWidgets.QDesktopWidget().screenGeometry(0)
         self.desktop_center()
+        self.offset=None
 
 
     def desktop_center(self):
         x=(self.desktop.width()-self.width())/2
         y=(self.desktop.height()-self.height())/2
-        self.move(int(x),int(y))
+        self.move(int(x),int(y)-20)
 
     def on_select_screen(self, indice):
         print(f"label clicked {indice}")
@@ -105,11 +106,9 @@ class WebScreen(QMainWindow):
             if self.camera.isRunning:
                 if self.nb_window==1:
                     self.stop()
-
                 self.camera = None
 
         index = self.ui.comboCamera.currentIndex()
-        self.ui.label_infos.setText("Détection en cours ...")
         self.ui.play.setEnabled(False)
         self.ui.stop.setEnabled(False)
         self.ui.record.setEnabled(False)
@@ -132,7 +131,7 @@ class WebScreen(QMainWindow):
             self.ui.record.setEnabled(True)
             self.ui.split.setEnabled(True)
 
-        self.ui.label_infos.setText(text)
+        #self.ui.label_infos.setText(text)
 
     def on_elapsed(self, milli):
         if self.camera.isRunning():
@@ -146,7 +145,6 @@ class WebScreen(QMainWindow):
         self.ui.slider_saturation.setValue(int(self.properties.saturation))
         self.ui.slider_brillance.setValue(int(self.properties.brightness))
         self.ui.slider_contraste.setValue(int(self.properties.contrast))
-        # self.center_cam(self.properties.width, self.properties.height)
 
     def image_update(self, image):
         if self.camera.isRunning():
@@ -197,7 +195,6 @@ class WebScreen(QMainWindow):
         self.screens[2].setVisible(False)
         self.screens[3].setVisible(False)
 
-
     def on_window(self, nb):
         if nb == 1:
             self.screens[1].setVisible(False)
@@ -211,7 +208,7 @@ class WebScreen(QMainWindow):
                     l = 640
                     h = l * 0.75
             else:
-                self.resize(1085, 880)
+                self.resize(self.desktop.width()-220, self.desktop.height()-120)
                 if self.ratio:
                     l = self.ui.container.width() - 10
                     h = l * 0.75
@@ -220,7 +217,7 @@ class WebScreen(QMainWindow):
                     h = l * 0.75
             self.center_cam(l, h)
 
-        if nb == 2:
+        elif nb == 2:
             self.screens[1].setVisible(True)
             self.screens[2].setVisible(False)
             self.screens[3].setVisible(False)
@@ -234,19 +231,27 @@ class WebScreen(QMainWindow):
                     x = (lw - w * 2) / 2
                     y = (hw - h) / 2
                 else:
-                    h = 480
-                    w = 640
+                    w = 440
+                    h = w*0.75
                     x = (lw - 2 * w) / 2
                     y = (hw - h) / 2
 
             else:  # normal screen
-                w = 640
-                h = w * 0.75
-                self.resize(int(w * 2.5), 885)
                 lw = self.ui.container.width()
                 hw = self.ui.container.height()
-                x = (lw - w * 2) / 2
-                y = (hw - h) / 2
+                if self.ratio:
+                    w = lw / 2 - marge
+                    h = w * 0.75
+                    x = (lw - w * 2) / 2
+                    y = (hw - h) / 2
+                else:
+                    w = 520
+                    h = w * 0.75
+                    self.resize(self.desktop.width()-10, self.desktop.height()-120)
+                    lw = self.ui.container.width()
+                    hw = self.ui.container.height()
+                    x = (lw - w * 2) / 2
+                    y = (hw - h) / 2
 
             self.screens[0].move(int(x), int(y))
             self.screens[0].resize(int(w), int(h))
@@ -270,29 +275,29 @@ class WebScreen(QMainWindow):
                 else :
                     l = self.ui.container.width() - 5
                     h = self.ui.container.height() - 5
-                    largeur = 600
+                    largeur = 400
                     hauteur = largeur * 0.75
                     x = (l - largeur * 2) / 2
                     y = (h - hauteur*2) / 2
                     espace = 4
 
             else:# normal
-                self.resize(1600, 1024)
+                self.resize(self.desktop.width()-15, self.desktop.height()-72)
                 if self.ratio:
                     l = self.ui.container.width() - 5
                     h = self.ui.container.height() - 5
                     largeur = (h * 1.33333333333) / 2
                     hauteur = h / 2
-                    x = (l - largeur * 2) / 2
-                    y = (h - hauteur*2) / 2
+                    x = ((l - largeur * 2) / 2)
+                    y = ((h - hauteur*2) / 2)
                     espace = 4
                 else:
                     lw = self.ui.container.width() - 5
                     hw = self.ui.container.height()-5
-                    largeur = 520
+                    largeur = 340
                     hauteur = largeur * 0.75
                     x = (lw - largeur*2 ) / 2
-                    y = (hw - hauteur*2) / 2
+                    y = ((hw - hauteur*2) / 2)
                     espace = 20
 
             self.screens[0].move(int(x), int(y))
@@ -322,13 +327,13 @@ class WebScreen(QMainWindow):
 
     def set_infos(self, text):
         self.infos_screen = text
-        style = "<p align=\"center\"><span style=\" font-size:18pt; font-style:italic; color:#aaaaff;\"><texte></span></p>"
+        style = "<p align=\"center\"><span style=\" font-size:12pt; font-style:italic; color:#aaaaff;\"><texte></span></p>"
         style = style.replace("<texte>", text)
         self.timer.start(20)
         self.timer2.start()
         self.ui.lbl_screen.raise_()
         self.ui.lbl_screen.setText(style)
-        self.center_label(400, 80, self.ui.lbl_screen)
+        self.center_label(200, 80, self.ui.lbl_screen)
 
     def on_timer(self):
         self.timer.stop()
@@ -347,8 +352,6 @@ class WebScreen(QMainWindow):
             else:
                 self.on_window(self.nb_window)
 
-
-
         else:
             self.ui.pushButton_maxi.setText("2")
             self.showMaximized()
@@ -358,8 +361,6 @@ class WebScreen(QMainWindow):
                     self.center_cam(self.ui.container.width(), self.ui.container.height())
             else:
                 self.on_window(self.nb_window)
-
-
 
     def mousePressEvent(self, event: QtGui.QMouseEvent) -> None:
         if event.button() == QtCore.Qt.LeftButton:
@@ -449,8 +450,8 @@ class WebScreen(QMainWindow):
         return style
 
     def center_infos(self):
-        l = self.ui.label_infos.width()
-        h = self.ui.label_infos.height()
+        l = self.ui.lbl_screen.width()
+        h = self.ui.lbl_screen.height()
         lc = self.ui.container.width()
         hc = self.ui.container.height()
         x = (lc - l)
