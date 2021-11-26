@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1079</width>
-    <height>883</height>
+    <width>1085</width>
+    <height>880</height>
    </rect>
   </property>
   <property name="minimumSize">
@@ -53,6 +53,18 @@ background-color: qlineargradient(spread:pad, x1:0.493, y1:0, x2:0.492925, y2:0.
        <enum>QFrame::Raised</enum>
       </property>
       <layout class="QVBoxLayout" name="verticalLayout_2">
+       <property name="leftMargin">
+        <number>6</number>
+       </property>
+       <property name="topMargin">
+        <number>4</number>
+       </property>
+       <property name="rightMargin">
+        <number>6</number>
+       </property>
+       <property name="bottomMargin">
+        <number>4</number>
+       </property>
        <item>
         <widget class="QFrame" name="Top">
          <property name="minimumSize">
@@ -224,11 +236,20 @@ background-color: rgb(69, 139, 209);
           <enum>QFrame::Raised</enum>
          </property>
          <layout class="QHBoxLayout" name="horizontalLayout">
+          <property name="spacing">
+           <number>0</number>
+          </property>
           <property name="leftMargin">
-           <number>5</number>
+           <number>0</number>
+          </property>
+          <property name="topMargin">
+           <number>0</number>
           </property>
           <property name="rightMargin">
-           <number>5</number>
+           <number>0</number>
+          </property>
+          <property name="bottomMargin">
+           <number>0</number>
           </property>
           <item>
            <widget class="QFrame" name="menu_left">
@@ -891,105 +912,36 @@ color:white;
             <property name="frameShadow">
              <enum>QFrame::Raised</enum>
             </property>
-            <widget class="QLabel" name="screen">
-             <property name="geometry">
-              <rect>
-               <x>45</x>
-               <y>255</y>
-               <width>731</width>
-               <height>180</height>
-              </rect>
-             </property>
-             <property name="styleSheet">
-              <string notr="true">color: rgb(255, 255, 255);</string>
-             </property>
-             <property name="text">
-              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:72pt; color:#6969ff;&quot;&gt;W&lt;/span&gt;&lt;span style=&quot; font-size:48pt; color:#a3a3ff;&quot;&gt;ebcam&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-             </property>
-             <property name="scaledContents">
-              <bool>true</bool>
-             </property>
-            </widget>
-            <widget class="QLabel" name="screen_2">
-             <property name="enabled">
-              <bool>true</bool>
-             </property>
-             <property name="geometry">
-              <rect>
-               <x>120</x>
-               <y>175</y>
-               <width>0</width>
-               <height>180</height>
-              </rect>
-             </property>
-             <property name="styleSheet">
-              <string notr="true">color: rgb(255, 255, 255);</string>
-             </property>
-             <property name="text">
-              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:72pt; color:#6969ff;&quot;&gt;W&lt;/span&gt;&lt;span style=&quot; font-size:48pt; color:#a3a3ff;&quot;&gt;ebcam &lt;/span&gt;&lt;span style=&quot; font-size:48pt; color:#7474b6;&quot;&gt;2&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-             </property>
-             <property name="scaledContents">
-              <bool>true</bool>
-             </property>
-            </widget>
-            <widget class="QLabel" name="screen_3">
-             <property name="geometry">
-              <rect>
-               <x>125</x>
-               <y>350</y>
-               <width>0</width>
-               <height>180</height>
-              </rect>
-             </property>
-             <property name="styleSheet">
-              <string notr="true">color: rgb(255, 255, 255);</string>
-             </property>
-             <property name="text">
-              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:72pt; color:#6969ff;&quot;&gt;W&lt;/span&gt;&lt;span style=&quot; font-size:48pt; color:#a3a3ff;&quot;&gt;ebcam &lt;/span&gt;&lt;span style=&quot; font-size:48pt; color:#7474b6;&quot;&gt;3&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-             </property>
-             <property name="scaledContents">
-              <bool>true</bool>
-             </property>
-            </widget>
-            <widget class="QLabel" name="screen_4">
-             <property name="geometry">
-              <rect>
-               <x>120</x>
-               <y>505</y>
-               <width>0</width>
-               <height>180</height>
-              </rect>
-             </property>
-             <property name="styleSheet">
-              <string notr="true">color: rgb(255, 255, 255);</string>
-             </property>
-             <property name="text">
-              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:72pt; color:#6969ff;&quot;&gt;W&lt;/span&gt;&lt;span style=&quot; font-size:48pt; color:#a3a3ff;&quot;&gt;ebcam &lt;/span&gt;&lt;span style=&quot; font-size:48pt; color:#7474b6;&quot;&gt;4&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-             </property>
-             <property name="scaledContents">
-              <bool>true</bool>
-             </property>
-            </widget>
             <widget class="QLabel" name="lbl_screen">
              <property name="geometry">
               <rect>
-               <x>195</x>
-               <y>500</y>
+               <x>185</x>
+               <y>635</y>
                <width>486</width>
-               <height>81</height>
+               <height>80</height>
               </rect>
+             </property>
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="minimumSize">
+              <size>
+               <width>0</width>
+               <height>0</height>
+              </size>
              </property>
              <property name="font">
               <font>
-               <pointsize>-1</pointsize>
                <italic>true</italic>
               </font>
              </property>
              <property name="styleSheet">
               <string notr="true">background-color: transparent;
 color:rgb(170, 170, 255);
-font-style:italic;
-font-size:28px;</string>
+</string>
              </property>
              <property name="text">
               <string/>
@@ -1014,92 +966,6 @@ font-size:28px;</string>
          <property name="verticalSpacing">
           <number>7</number>
          </property>
-         <item row="1" column="0">
-          <widget class="QPushButton" name="play">
-           <property name="minimumSize">
-            <size>
-             <width>60</width>
-             <height>30</height>
-            </size>
-           </property>
-           <property name="maximumSize">
-            <size>
-             <width>60</width>
-             <height>30</height>
-            </size>
-           </property>
-           <property name="font">
-            <font>
-             <family>Wingdings 3</family>
-             <pointsize>9</pointsize>
-            </font>
-           </property>
-           <property name="styleSheet">
-            <string notr="true">QPushButton{
-background: qlineargradient(x1: 0, y1: 0,    x2: 0, y2: 1,
-    stop: 0 #66e, stop: 1 #bbf);
-background: qlineargradient(x1: 0, y1: 0.2, x2: 1, y2: 1,
-    stop: 0 #bbf, stop: 1 #55f);
-}
-
-QPushButton:hover{
-border: 1px solid black;
-}
-
-
-QPushButton:pressed{
-border: 1px solid rgb(68, 0, 102);
-	background-color: rgb(211, 199, 255);
-}</string>
-           </property>
-           <property name="text">
-            <string/>
-           </property>
-          </widget>
-         </item>
-         <item row="1" column="1">
-          <widget class="QPushButton" name="stop">
-           <property name="minimumSize">
-            <size>
-             <width>60</width>
-             <height>0</height>
-            </size>
-           </property>
-           <property name="maximumSize">
-            <size>
-             <width>60</width>
-             <height>30</height>
-            </size>
-           </property>
-           <property name="font">
-            <font>
-             <family>Wingdings 2</family>
-             <pointsize>9</pointsize>
-            </font>
-           </property>
-           <property name="styleSheet">
-            <string notr="true">QPushButton{
-background: qlineargradient(x1: 0, y1: 0,    x2: 0, y2: 1,
-    stop: 0 #66e, stop: 1 #bbf);
-background: qlineargradient(x1: 0, y1: 0.2, x2: 1, y2: 1,
-    stop: 0 #bbf, stop: 1 #55f);
-}
-
-QPushButton:hover{
-border: 1px solid black;
-}
-
-
-QPushButton:pressed{
-border: 1px solid rgb(68, 0, 102);
-	background-color: rgb(211, 199, 255);
-}</string>
-           </property>
-           <property name="text">
-            <string/>
-           </property>
-          </widget>
-         </item>
          <item row="1" column="3">
           <widget class="QPushButton" name="split">
            <property name="minimumSize">
@@ -1181,6 +1047,165 @@ color:white;</string>
            </property>
            <property name="alignment">
             <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="1">
+          <widget class="QPushButton" name="stop">
+           <property name="minimumSize">
+            <size>
+             <width>60</width>
+             <height>0</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>60</width>
+             <height>30</height>
+            </size>
+           </property>
+           <property name="font">
+            <font>
+             <family>Wingdings 2</family>
+             <pointsize>9</pointsize>
+            </font>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QPushButton{
+background: qlineargradient(x1: 0, y1: 0,    x2: 0, y2: 1,
+    stop: 0 #66e, stop: 1 #bbf);
+background: qlineargradient(x1: 0, y1: 0.2, x2: 1, y2: 1,
+    stop: 0 #bbf, stop: 1 #55f);
+}
+
+QPushButton:hover{
+border: 1px solid black;
+}
+
+
+QPushButton:pressed{
+border: 1px solid rgb(68, 0, 102);
+	background-color: rgb(211, 199, 255);
+}</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="0">
+          <widget class="QPushButton" name="play">
+           <property name="minimumSize">
+            <size>
+             <width>60</width>
+             <height>30</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>60</width>
+             <height>30</height>
+            </size>
+           </property>
+           <property name="font">
+            <font>
+             <family>Wingdings 3</family>
+             <pointsize>9</pointsize>
+            </font>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QPushButton{
+background: qlineargradient(x1: 0, y1: 0,    x2: 0, y2: 1,
+    stop: 0 #66e, stop: 1 #bbf);
+background: qlineargradient(x1: 0, y1: 0.2, x2: 1, y2: 1,
+    stop: 0 #bbf, stop: 1 #55f);
+}
+
+QPushButton:hover{
+border: 1px solid black;
+}
+
+
+QPushButton:pressed{
+border: 1px solid rgb(68, 0, 102);
+	background-color: rgb(211, 199, 255);
+}</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="2">
+          <widget class="QPushButton" name="record">
+           <property name="minimumSize">
+            <size>
+             <width>60</width>
+             <height>30</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>60</width>
+             <height>30</height>
+            </size>
+           </property>
+           <property name="font">
+            <font>
+             <family>Wingdings 3</family>
+             <pointsize>9</pointsize>
+            </font>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QPushButton{
+background: qlineargradient(x1: 0, y1: 0,    x2: 0, y2: 1,
+    stop: 0 #66e, stop: 1 #bbf);
+background: qlineargradient(x1: 0, y1: 0.2, x2: 1, y2: 1,
+    stop: 0 #bbf, stop: 1 #55f);
+}
+
+QPushButton:hover{
+border: 1px solid black;
+}
+
+
+QPushButton:pressed{
+border: 1px solid rgb(68, 0, 102);
+	background-color: rgb(211, 199, 255);
+}</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="icon">
+            <iconset resource="webcam.qrc">
+             <normaloff>:/icones/icones/media/Record.png</normaloff>:/icones/icones/media/Record.png</iconset>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>30</width>
+             <height>30</height>
+            </size>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="7">
+          <widget class="QLabel" name="label_infos2">
+           <property name="styleSheet">
+            <string notr="true">background-color:transparent ;
+color:white;</string>
+           </property>
+           <property name="text">
+            <string>Stop</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+           </property>
+           <property name="margin">
+            <number>0</number>
+           </property>
+           <property name="indent">
+            <number>10</number>
            </property>
           </widget>
          </item>
@@ -1275,81 +1300,6 @@ border-radius: 4px;
            </property>
           </widget>
          </item>
-         <item row="1" column="2">
-          <widget class="QPushButton" name="record">
-           <property name="minimumSize">
-            <size>
-             <width>60</width>
-             <height>30</height>
-            </size>
-           </property>
-           <property name="maximumSize">
-            <size>
-             <width>60</width>
-             <height>30</height>
-            </size>
-           </property>
-           <property name="font">
-            <font>
-             <family>Wingdings 3</family>
-             <pointsize>9</pointsize>
-            </font>
-           </property>
-           <property name="styleSheet">
-            <string notr="true">QPushButton{
-background: qlineargradient(x1: 0, y1: 0,    x2: 0, y2: 1,
-    stop: 0 #66e, stop: 1 #bbf);
-background: qlineargradient(x1: 0, y1: 0.2, x2: 1, y2: 1,
-    stop: 0 #bbf, stop: 1 #55f);
-}
-
-QPushButton:hover{
-border: 1px solid black;
-}
-
-
-QPushButton:pressed{
-border: 1px solid rgb(68, 0, 102);
-	background-color: rgb(211, 199, 255);
-}</string>
-           </property>
-           <property name="text">
-            <string/>
-           </property>
-           <property name="icon">
-            <iconset resource="webcam.qrc">
-             <normaloff>:/icones/icones/media/Record.png</normaloff>:/icones/icones/media/Record.png</iconset>
-           </property>
-           <property name="iconSize">
-            <size>
-             <width>30</width>
-             <height>30</height>
-            </size>
-           </property>
-          </widget>
-         </item>
-         <item row="2" column="7">
-          <widget class="QLabel" name="label_infos2">
-           <property name="styleSheet">
-            <string notr="true">background-color:transparent ;
-color:white;</string>
-           </property>
-           <property name="text">
-            <string>Stop</string>
-           </property>
-          </widget>
-         </item>
-         <item row="2" column="5" colspan="2">
-          <widget class="QLabel" name="label_infos">
-           <property name="styleSheet">
-            <string notr="true">background-color:transparent ;
-color:white;</string>
-           </property>
-           <property name="text">
-            <string/>
-           </property>
-          </widget>
-         </item>
          <item row="1" column="6">
           <widget class="QLabel" name="led">
            <property name="minimumSize">
@@ -1376,6 +1326,17 @@ border: 0px solid;</string>
            </property>
            <property name="scaledContents">
             <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="5" colspan="2">
+          <widget class="QLabel" name="label_infos">
+           <property name="styleSheet">
+            <string notr="true">background-color:transparent ;
+color:white;</string>
+           </property>
+           <property name="text">
+            <string/>
            </property>
           </widget>
          </item>

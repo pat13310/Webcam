@@ -14,7 +14,7 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_WebCam(object):
     def setupUi(self, WebCam):
         WebCam.setObjectName("WebCam")
-        WebCam.resize(1079, 883)
+        WebCam.resize(1085, 880)
         WebCam.setMinimumSize(QtCore.QSize(0, 800))
         self.centralwidget = QtWidgets.QWidget(WebCam)
         self.centralwidget.setStyleSheet("border-radius:10px;")
@@ -31,6 +31,7 @@ class Ui_WebCam(object):
         self.cadre.setFrameShadow(QtWidgets.QFrame.Raised)
         self.cadre.setObjectName("cadre")
         self.verticalLayout_2 = QtWidgets.QVBoxLayout(self.cadre)
+        self.verticalLayout_2.setContentsMargins(6, 4, 6, 4)
         self.verticalLayout_2.setObjectName("verticalLayout_2")
         self.Top = QtWidgets.QFrame(self.cadre)
         self.Top.setMinimumSize(QtCore.QSize(930, 40))
@@ -117,7 +118,8 @@ class Ui_WebCam(object):
         self.frame.setFrameShadow(QtWidgets.QFrame.Raised)
         self.frame.setObjectName("frame")
         self.horizontalLayout = QtWidgets.QHBoxLayout(self.frame)
-        self.horizontalLayout.setContentsMargins(5, -1, 5, -1)
+        self.horizontalLayout.setContentsMargins(0, 0, 0, 0)
+        self.horizontalLayout.setSpacing(0)
         self.horizontalLayout.setObjectName("horizontalLayout")
         self.menu_left = QtWidgets.QFrame(self.frame)
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Preferred)
@@ -477,37 +479,20 @@ class Ui_WebCam(object):
         self.container.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.container.setFrameShadow(QtWidgets.QFrame.Raised)
         self.container.setObjectName("container")
-        self.screen = QtWidgets.QLabel(self.container)
-        self.screen.setGeometry(QtCore.QRect(45, 255, 731, 180))
-        self.screen.setStyleSheet("color: rgb(255, 255, 255);")
-        self.screen.setScaledContents(True)
-        self.screen.setObjectName("screen")
-        self.screen_2 = QtWidgets.QLabel(self.container)
-        self.screen_2.setEnabled(True)
-        self.screen_2.setGeometry(QtCore.QRect(120, 175, 0, 180))
-        self.screen_2.setStyleSheet("color: rgb(255, 255, 255);")
-        self.screen_2.setScaledContents(True)
-        self.screen_2.setObjectName("screen_2")
-        self.screen_3 = QtWidgets.QLabel(self.container)
-        self.screen_3.setGeometry(QtCore.QRect(125, 350, 0, 180))
-        self.screen_3.setStyleSheet("color: rgb(255, 255, 255);")
-        self.screen_3.setScaledContents(True)
-        self.screen_3.setObjectName("screen_3")
-        self.screen_4 = QtWidgets.QLabel(self.container)
-        self.screen_4.setGeometry(QtCore.QRect(120, 505, 0, 180))
-        self.screen_4.setStyleSheet("color: rgb(255, 255, 255);")
-        self.screen_4.setScaledContents(True)
-        self.screen_4.setObjectName("screen_4")
         self.lbl_screen = QtWidgets.QLabel(self.container)
-        self.lbl_screen.setGeometry(QtCore.QRect(195, 500, 486, 81))
+        self.lbl_screen.setGeometry(QtCore.QRect(185, 635, 486, 80))
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Preferred)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.lbl_screen.sizePolicy().hasHeightForWidth())
+        self.lbl_screen.setSizePolicy(sizePolicy)
+        self.lbl_screen.setMinimumSize(QtCore.QSize(0, 0))
         font = QtGui.QFont()
-        font.setPointSize(-1)
         font.setItalic(True)
         self.lbl_screen.setFont(font)
         self.lbl_screen.setStyleSheet("background-color: transparent;\n"
 "color:rgb(170, 170, 255);\n"
-"font-style:italic;\n"
-"font-size:28px;")
+"")
         self.lbl_screen.setText("")
         self.lbl_screen.setAlignment(QtCore.Qt.AlignCenter)
         self.lbl_screen.setObjectName("lbl_screen")
@@ -518,58 +503,6 @@ class Ui_WebCam(object):
         self.gridLayout.setContentsMargins(-1, -1, -1, 0)
         self.gridLayout.setVerticalSpacing(7)
         self.gridLayout.setObjectName("gridLayout")
-        self.play = QtWidgets.QPushButton(self.cadre)
-        self.play.setMinimumSize(QtCore.QSize(60, 30))
-        self.play.setMaximumSize(QtCore.QSize(60, 30))
-        font = QtGui.QFont()
-        font.setFamily("Wingdings 3")
-        font.setPointSize(9)
-        self.play.setFont(font)
-        self.play.setStyleSheet("QPushButton{\n"
-"background: qlineargradient(x1: 0, y1: 0,    x2: 0, y2: 1,\n"
-"    stop: 0 #66e, stop: 1 #bbf);\n"
-"background: qlineargradient(x1: 0, y1: 0.2, x2: 1, y2: 1,\n"
-"    stop: 0 #bbf, stop: 1 #55f);\n"
-"}\n"
-"\n"
-"QPushButton:hover{\n"
-"border: 1px solid black;\n"
-"}\n"
-"\n"
-"\n"
-"QPushButton:pressed{\n"
-"border: 1px solid rgb(68, 0, 102);\n"
-"    background-color: rgb(211, 199, 255);\n"
-"}")
-        self.play.setText("")
-        self.play.setObjectName("play")
-        self.gridLayout.addWidget(self.play, 1, 0, 1, 1)
-        self.stop = QtWidgets.QPushButton(self.cadre)
-        self.stop.setMinimumSize(QtCore.QSize(60, 0))
-        self.stop.setMaximumSize(QtCore.QSize(60, 30))
-        font = QtGui.QFont()
-        font.setFamily("Wingdings 2")
-        font.setPointSize(9)
-        self.stop.setFont(font)
-        self.stop.setStyleSheet("QPushButton{\n"
-"background: qlineargradient(x1: 0, y1: 0,    x2: 0, y2: 1,\n"
-"    stop: 0 #66e, stop: 1 #bbf);\n"
-"background: qlineargradient(x1: 0, y1: 0.2, x2: 1, y2: 1,\n"
-"    stop: 0 #bbf, stop: 1 #55f);\n"
-"}\n"
-"\n"
-"QPushButton:hover{\n"
-"border: 1px solid black;\n"
-"}\n"
-"\n"
-"\n"
-"QPushButton:pressed{\n"
-"border: 1px solid rgb(68, 0, 102);\n"
-"    background-color: rgb(211, 199, 255);\n"
-"}")
-        self.stop.setText("")
-        self.stop.setObjectName("stop")
-        self.gridLayout.addWidget(self.stop, 1, 1, 1, 1)
         self.split = QtWidgets.QPushButton(self.cadre)
         self.split.setMinimumSize(QtCore.QSize(60, 30))
         self.split.setMaximumSize(QtCore.QSize(60, 30))
@@ -615,6 +548,95 @@ class Ui_WebCam(object):
         self.lbl_duration.setAlignment(QtCore.Qt.AlignRight|QtCore.Qt.AlignTrailing|QtCore.Qt.AlignVCenter)
         self.lbl_duration.setObjectName("lbl_duration")
         self.gridLayout.addWidget(self.lbl_duration, 1, 7, 1, 1)
+        self.stop = QtWidgets.QPushButton(self.cadre)
+        self.stop.setMinimumSize(QtCore.QSize(60, 0))
+        self.stop.setMaximumSize(QtCore.QSize(60, 30))
+        font = QtGui.QFont()
+        font.setFamily("Wingdings 2")
+        font.setPointSize(9)
+        self.stop.setFont(font)
+        self.stop.setStyleSheet("QPushButton{\n"
+"background: qlineargradient(x1: 0, y1: 0,    x2: 0, y2: 1,\n"
+"    stop: 0 #66e, stop: 1 #bbf);\n"
+"background: qlineargradient(x1: 0, y1: 0.2, x2: 1, y2: 1,\n"
+"    stop: 0 #bbf, stop: 1 #55f);\n"
+"}\n"
+"\n"
+"QPushButton:hover{\n"
+"border: 1px solid black;\n"
+"}\n"
+"\n"
+"\n"
+"QPushButton:pressed{\n"
+"border: 1px solid rgb(68, 0, 102);\n"
+"    background-color: rgb(211, 199, 255);\n"
+"}")
+        self.stop.setText("")
+        self.stop.setObjectName("stop")
+        self.gridLayout.addWidget(self.stop, 1, 1, 1, 1)
+        self.play = QtWidgets.QPushButton(self.cadre)
+        self.play.setMinimumSize(QtCore.QSize(60, 30))
+        self.play.setMaximumSize(QtCore.QSize(60, 30))
+        font = QtGui.QFont()
+        font.setFamily("Wingdings 3")
+        font.setPointSize(9)
+        self.play.setFont(font)
+        self.play.setStyleSheet("QPushButton{\n"
+"background: qlineargradient(x1: 0, y1: 0,    x2: 0, y2: 1,\n"
+"    stop: 0 #66e, stop: 1 #bbf);\n"
+"background: qlineargradient(x1: 0, y1: 0.2, x2: 1, y2: 1,\n"
+"    stop: 0 #bbf, stop: 1 #55f);\n"
+"}\n"
+"\n"
+"QPushButton:hover{\n"
+"border: 1px solid black;\n"
+"}\n"
+"\n"
+"\n"
+"QPushButton:pressed{\n"
+"border: 1px solid rgb(68, 0, 102);\n"
+"    background-color: rgb(211, 199, 255);\n"
+"}")
+        self.play.setText("")
+        self.play.setObjectName("play")
+        self.gridLayout.addWidget(self.play, 1, 0, 1, 1)
+        self.record = QtWidgets.QPushButton(self.cadre)
+        self.record.setMinimumSize(QtCore.QSize(60, 30))
+        self.record.setMaximumSize(QtCore.QSize(60, 30))
+        font = QtGui.QFont()
+        font.setFamily("Wingdings 3")
+        font.setPointSize(9)
+        self.record.setFont(font)
+        self.record.setStyleSheet("QPushButton{\n"
+"background: qlineargradient(x1: 0, y1: 0,    x2: 0, y2: 1,\n"
+"    stop: 0 #66e, stop: 1 #bbf);\n"
+"background: qlineargradient(x1: 0, y1: 0.2, x2: 1, y2: 1,\n"
+"    stop: 0 #bbf, stop: 1 #55f);\n"
+"}\n"
+"\n"
+"QPushButton:hover{\n"
+"border: 1px solid black;\n"
+"}\n"
+"\n"
+"\n"
+"QPushButton:pressed{\n"
+"border: 1px solid rgb(68, 0, 102);\n"
+"    background-color: rgb(211, 199, 255);\n"
+"}")
+        self.record.setText("")
+        icon4 = QtGui.QIcon()
+        icon4.addPixmap(QtGui.QPixmap(":/icones/icones/media/Record.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.record.setIcon(icon4)
+        self.record.setIconSize(QtCore.QSize(30, 30))
+        self.record.setObjectName("record")
+        self.gridLayout.addWidget(self.record, 1, 2, 1, 1)
+        self.label_infos2 = QtWidgets.QLabel(self.cadre)
+        self.label_infos2.setStyleSheet("background-color:transparent ;\n"
+"color:white;")
+        self.label_infos2.setAlignment(QtCore.Qt.AlignRight|QtCore.Qt.AlignTrailing|QtCore.Qt.AlignVCenter)
+        self.label_infos2.setIndent(10)
+        self.label_infos2.setObjectName("label_infos2")
+        self.gridLayout.addWidget(self.label_infos2, 2, 7, 1, 1)
         self.slider_position = QtWidgets.QSlider(self.cadre)
         self.slider_position.setMinimumSize(QtCore.QSize(600, 0))
         self.slider_position.setMaximumSize(QtCore.QSize(16777215, 16777215))
@@ -685,47 +707,6 @@ class Ui_WebCam(object):
         self.slider_position.setOrientation(QtCore.Qt.Horizontal)
         self.slider_position.setObjectName("slider_position")
         self.gridLayout.addWidget(self.slider_position, 1, 5, 1, 1)
-        self.record = QtWidgets.QPushButton(self.cadre)
-        self.record.setMinimumSize(QtCore.QSize(60, 30))
-        self.record.setMaximumSize(QtCore.QSize(60, 30))
-        font = QtGui.QFont()
-        font.setFamily("Wingdings 3")
-        font.setPointSize(9)
-        self.record.setFont(font)
-        self.record.setStyleSheet("QPushButton{\n"
-"background: qlineargradient(x1: 0, y1: 0,    x2: 0, y2: 1,\n"
-"    stop: 0 #66e, stop: 1 #bbf);\n"
-"background: qlineargradient(x1: 0, y1: 0.2, x2: 1, y2: 1,\n"
-"    stop: 0 #bbf, stop: 1 #55f);\n"
-"}\n"
-"\n"
-"QPushButton:hover{\n"
-"border: 1px solid black;\n"
-"}\n"
-"\n"
-"\n"
-"QPushButton:pressed{\n"
-"border: 1px solid rgb(68, 0, 102);\n"
-"    background-color: rgb(211, 199, 255);\n"
-"}")
-        self.record.setText("")
-        icon4 = QtGui.QIcon()
-        icon4.addPixmap(QtGui.QPixmap(":/icones/icones/media/Record.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        self.record.setIcon(icon4)
-        self.record.setIconSize(QtCore.QSize(30, 30))
-        self.record.setObjectName("record")
-        self.gridLayout.addWidget(self.record, 1, 2, 1, 1)
-        self.label_infos2 = QtWidgets.QLabel(self.cadre)
-        self.label_infos2.setStyleSheet("background-color:transparent ;\n"
-"color:white;")
-        self.label_infos2.setObjectName("label_infos2")
-        self.gridLayout.addWidget(self.label_infos2, 2, 7, 1, 1)
-        self.label_infos = QtWidgets.QLabel(self.cadre)
-        self.label_infos.setStyleSheet("background-color:transparent ;\n"
-"color:white;")
-        self.label_infos.setText("")
-        self.label_infos.setObjectName("label_infos")
-        self.gridLayout.addWidget(self.label_infos, 2, 5, 1, 2)
         self.led = QtWidgets.QLabel(self.cadre)
         self.led.setMinimumSize(QtCore.QSize(20, 20))
         self.led.setMaximumSize(QtCore.QSize(25, 25))
@@ -736,6 +717,12 @@ class Ui_WebCam(object):
         self.led.setScaledContents(True)
         self.led.setObjectName("led")
         self.gridLayout.addWidget(self.led, 1, 6, 1, 1)
+        self.label_infos = QtWidgets.QLabel(self.cadre)
+        self.label_infos.setStyleSheet("background-color:transparent ;\n"
+"color:white;")
+        self.label_infos.setText("")
+        self.label_infos.setObjectName("label_infos")
+        self.gridLayout.addWidget(self.label_infos, 2, 5, 1, 2)
         self.verticalLayout_2.addLayout(self.gridLayout)
         self.verticalLayout.addWidget(self.cadre)
         WebCam.setCentralWidget(self.centralwidget)
@@ -755,10 +742,6 @@ class Ui_WebCam(object):
         self.lbl_saturation.setText(_translate("WebCam", "<html><head/><body><p>Saturation :   <span style=\" color:#aaaaff;\">0</span></p></body></html>"))
         self.chk_inverse.setText(_translate("WebCam", "Inverser"))
         self.chk_grey.setText(_translate("WebCam", "blanc et noir"))
-        self.screen.setText(_translate("WebCam", "<html><head/><body><p align=\"center\"><span style=\" font-size:72pt; color:#6969ff;\">W</span><span style=\" font-size:48pt; color:#a3a3ff;\">ebcam</span></p></body></html>"))
-        self.screen_2.setText(_translate("WebCam", "<html><head/><body><p align=\"center\"><span style=\" font-size:72pt; color:#6969ff;\">W</span><span style=\" font-size:48pt; color:#a3a3ff;\">ebcam </span><span style=\" font-size:48pt; color:#7474b6;\">2</span></p></body></html>"))
-        self.screen_3.setText(_translate("WebCam", "<html><head/><body><p align=\"center\"><span style=\" font-size:72pt; color:#6969ff;\">W</span><span style=\" font-size:48pt; color:#a3a3ff;\">ebcam </span><span style=\" font-size:48pt; color:#7474b6;\">3</span></p></body></html>"))
-        self.screen_4.setText(_translate("WebCam", "<html><head/><body><p align=\"center\"><span style=\" font-size:72pt; color:#6969ff;\">W</span><span style=\" font-size:48pt; color:#a3a3ff;\">ebcam </span><span style=\" font-size:48pt; color:#7474b6;\">4</span></p></body></html>"))
         self.lbl_duration.setText(_translate("WebCam", "00::00:00  "))
         self.label_infos2.setText(_translate("WebCam", "Stop"))
 import webcam_rc

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Form</class>
+ <widget class="QWidget" name="Form">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>400</width>
+    <height>300</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <widget class="QLabel" name="screen">
+   <property name="geometry">
+    <rect>
+     <x>-105</x>
+     <y>60</y>
+     <width>546</width>
+     <height>140</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel{
+color: rgb(255, 255, 255);
+}
+
+QLabel:hover{
+border: 1px solid rgb(170, 170, 255);
+}
+
+QLabel:pressed{
+border: 1px solid rgb(0, 255, 0);
+}</string>
+   </property>
+   <property name="text">
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:72pt; font-style:italic; color:#6969ff;&quot;&gt;W&lt;/span&gt;&lt;span style=&quot; font-size:48pt; font-style:italic; color:#a3a3ff;&quot;&gt;ebcam&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+   </property>
+   <property name="scaledContents">
+    <bool>true</bool>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
