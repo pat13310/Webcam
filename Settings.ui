@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1194</width>
-    <height>754</height>
+    <width>827</width>
+    <height>666</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -40,16 +40,16 @@ background-color: qlineargradient(spread:pad, x1:0.493, y1:0, x2:0.492925, y2:0.
          <property name="maximumSize">
           <size>
            <width>16777215</width>
-           <height>40</height>
+           <height>31</height>
           </size>
          </property>
          <widget class="QPushButton" name="pushButton_close">
           <property name="geometry">
            <rect>
-            <x>20</x>
+            <x>15</x>
             <y>0</y>
-            <width>41</width>
-            <height>30</height>
+            <width>25</width>
+            <height>25</height>
            </rect>
           </property>
           <property name="font">
@@ -63,6 +63,7 @@ background-color: qlineargradient(spread:pad, x1:0.493, y1:0, x2:0.492925, y2:0.
 color: rgb(255, 255, 255);
 background-color: rgb(255, 0, 0);
 border: 1px solid rgb(85, 0, 0);
+border-radius:4px;
 }
 
 QPushButton:hover{
@@ -80,10 +81,10 @@ background-color: rgb(208, 0, 0);
          <widget class="QPushButton" name="pushButton_maxi">
           <property name="geometry">
            <rect>
-            <x>80</x>
+            <x>45</x>
             <y>0</y>
-            <width>41</width>
-            <height>30</height>
+            <width>25</width>
+            <height>25</height>
            </rect>
           </property>
           <property name="font">
@@ -93,12 +94,10 @@ background-color: rgb(208, 0, 0);
            </font>
           </property>
           <property name="styleSheet">
-           <string notr="true">
-
-
-QPushButton{
+           <string notr="true">QPushButton{
 background-color: rgb(85, 170, 255);
 border: 1px solid blue;
+border-radius:4px;
 }
 
 QPushButton:hover{
@@ -130,9 +129,9 @@ background-color: rgb(69, 139, 209);
           <property name="geometry">
            <rect>
             <x>10</x>
-            <y>5</y>
-            <width>191</width>
-            <height>321</height>
+            <y>0</y>
+            <width>161</width>
+            <height>266</height>
            </rect>
           </property>
           <property name="styleSheet">
@@ -146,7 +145,7 @@ color: rgb(170, 107, 255);</string>
           <widget class="QCheckBox" name="chk_adjust">
            <property name="geometry">
             <rect>
-             <x>35</x>
+             <x>30</x>
              <y>35</y>
              <width>117</width>
              <height>16</height>
@@ -163,8 +162,8 @@ border: 0px solid;</string>
           <widget class="QLabel" name="lbl_saturation">
            <property name="geometry">
             <rect>
-             <x>35</x>
-             <y>240</y>
+             <x>30</x>
+             <y>209</y>
              <width>121</width>
              <height>17</height>
             </rect>
@@ -194,8 +193,8 @@ border: 0px solid;</string>
           <widget class="QLabel" name="lbl_contraste">
            <property name="geometry">
             <rect>
-             <x>35</x>
-             <y>161</y>
+             <x>30</x>
+             <y>155</y>
              <width>126</width>
              <height>17</height>
             </rect>
@@ -225,9 +224,9 @@ border: 0px solid;</string>
           <widget class="QSlider" name="slider_contraste">
            <property name="geometry">
             <rect>
-             <x>35</x>
-             <y>186</y>
-             <width>130</width>
+             <x>30</x>
+             <y>180</y>
+             <width>96</width>
              <height>16</height>
             </rect>
            </property>
@@ -316,9 +315,9 @@ border-radius: 4px;
           <widget class="QSlider" name="slider_brillance">
            <property name="geometry">
             <rect>
-             <x>35</x>
-             <y>106</y>
-             <width>130</width>
+             <x>30</x>
+             <y>126</y>
+             <width>96</width>
              <height>16</height>
             </rect>
            </property>
@@ -407,8 +406,8 @@ border-radius: 4px;
           <widget class="QLabel" name="lbl_brillance">
            <property name="geometry">
             <rect>
-             <x>35</x>
-             <y>80</y>
+             <x>30</x>
+             <y>100</y>
              <width>126</width>
              <height>18</height>
             </rect>
@@ -444,9 +443,9 @@ border: 0px solid;</string>
           <widget class="QSlider" name="slider_saturation">
            <property name="geometry">
             <rect>
-             <x>35</x>
-             <y>266</y>
-             <width>130</width>
+             <x>30</x>
+             <y>235</y>
+             <width>96</width>
              <height>16</height>
             </rect>
            </property>
@@ -532,14 +531,31 @@ border-radius: 4px;
             <enum>Qt::Horizontal</enum>
            </property>
           </widget>
+          <widget class="QCheckBox" name="chk_inverse">
+           <property name="geometry">
+            <rect>
+             <x>30</x>
+             <y>60</y>
+             <width>102</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">color: rgb(255, 255, 255);
+border: 0px solid;</string>
+           </property>
+           <property name="text">
+            <string>Inverser l'écran</string>
+           </property>
+          </widget>
          </widget>
          <widget class="QGroupBox" name="groupBox_2">
           <property name="geometry">
            <rect>
-            <x>210</x>
-            <y>200</y>
-            <width>671</width>
-            <height>196</height>
+            <x>180</x>
+            <y>185</y>
+            <width>426</width>
+            <height>176</height>
            </rect>
           </property>
           <property name="styleSheet">
@@ -553,10 +569,10 @@ color: rgb(170, 107, 255);</string>
           <widget class="QLineEdit" name="edit_image">
            <property name="geometry">
             <rect>
-             <x>210</x>
-             <y>110</y>
-             <width>396</width>
-             <height>22</height>
+             <x>125</x>
+             <y>92</y>
+             <width>286</width>
+             <height>18</height>
             </rect>
            </property>
            <property name="styleSheet">
@@ -576,11 +592,29 @@ border-radius:4px;
           <widget class="QPushButton" name="pb_dir_image">
            <property name="geometry">
             <rect>
-             <x>45</x>
-             <y>105</y>
-             <width>151</width>
-             <height>28</height>
+             <x>15</x>
+             <y>86</y>
+             <width>100</width>
+             <height>30</height>
             </rect>
+           </property>
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Minimum" vsizetype="Expanding">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>100</width>
+             <height>30</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>100</width>
+             <height>30</height>
+            </size>
            </property>
            <property name="styleSheet">
             <string notr="true">
@@ -605,10 +639,10 @@ background-color: rgb(170, 179, 255);
           <widget class="QLineEdit" name="edit_video">
            <property name="geometry">
             <rect>
-             <x>210</x>
-             <y>155</y>
-             <width>396</width>
-             <height>22</height>
+             <x>125</x>
+             <y>131</y>
+             <width>286</width>
+             <height>18</height>
             </rect>
            </property>
            <property name="styleSheet">
@@ -628,11 +662,29 @@ border-radius:4px;
           <widget class="QPushButton" name="pb_dir_video">
            <property name="geometry">
             <rect>
-             <x>45</x>
-             <y>150</y>
-             <width>151</width>
-             <height>28</height>
+             <x>15</x>
+             <y>125</y>
+             <width>100</width>
+             <height>30</height>
             </rect>
+           </property>
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Minimum" vsizetype="Expanding">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>100</width>
+             <height>30</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>100</width>
+             <height>30</height>
+            </size>
            </property>
            <property name="styleSheet">
             <string notr="true">
@@ -657,9 +709,9 @@ background-color: rgb(170, 179, 255);
           <widget class="QCheckBox" name="chk_image_horodate">
            <property name="geometry">
             <rect>
-             <x>45</x>
-             <y>30</y>
-             <width>221</width>
+             <x>15</x>
+             <y>34</y>
+             <width>195</width>
              <height>16</height>
             </rect>
            </property>
@@ -674,9 +726,9 @@ border: 0px solid;</string>
           <widget class="QCheckBox" name="chk_video_horodate">
            <property name="geometry">
             <rect>
-             <x>45</x>
-             <y>65</y>
-             <width>211</width>
+             <x>15</x>
+             <y>61</y>
+             <width>192</width>
              <height>16</height>
             </rect>
            </property>
@@ -691,10 +743,10 @@ border: 0px solid;</string>
           <widget class="QLineEdit" name="edit_filename_image">
            <property name="geometry">
             <rect>
-             <x>275</x>
-             <y>25</y>
-             <width>331</width>
-             <height>22</height>
+             <x>225</x>
+             <y>32</y>
+             <width>186</width>
+             <height>18</height>
             </rect>
            </property>
            <property name="styleSheet">
@@ -717,10 +769,10 @@ border-radius:4px;
            </property>
            <property name="geometry">
             <rect>
-             <x>275</x>
-             <y>65</y>
-             <width>331</width>
-             <height>22</height>
+             <x>225</x>
+             <y>59</y>
+             <width>186</width>
+             <height>18</height>
             </rect>
            </property>
            <property name="styleSheet">
@@ -744,10 +796,10 @@ border-radius:4px;
          <widget class="QGroupBox" name="groupBox_3">
           <property name="geometry">
            <rect>
-            <x>210</x>
-            <y>405</y>
-            <width>671</width>
-            <height>206</height>
+            <x>180</x>
+            <y>370</y>
+            <width>426</width>
+            <height>181</height>
            </rect>
           </property>
           <property name="styleSheet">
@@ -761,11 +813,23 @@ color: rgb(170, 107, 255);</string>
           <widget class="QLineEdit" name="edit_ip2">
            <property name="geometry">
             <rect>
-             <x>210</x>
-             <y>75</y>
-             <width>396</width>
-             <height>22</height>
+             <x>127</x>
+             <y>68</y>
+             <width>256</width>
+             <height>18</height>
             </rect>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>200</width>
+             <height>0</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>16777215</width>
+             <height>16777215</height>
+            </size>
            </property>
            <property name="styleSheet">
             <string notr="true">QLineEdit{
@@ -784,11 +848,29 @@ border-radius:4px;
           <widget class="QPushButton" name="pb_test_ip2">
            <property name="geometry">
             <rect>
-             <x>45</x>
-             <y>70</y>
-             <width>151</width>
-             <height>28</height>
+             <x>15</x>
+             <y>62</y>
+             <width>100</width>
+             <height>30</height>
             </rect>
+           </property>
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>100</width>
+             <height>30</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>110</width>
+             <height>30</height>
+            </size>
            </property>
            <property name="styleSheet">
             <string notr="true">
@@ -813,11 +895,23 @@ background-color: rgb(170, 179, 255);
           <widget class="QLineEdit" name="edit_ip3">
            <property name="geometry">
             <rect>
-             <x>210</x>
-             <y>120</y>
-             <width>396</width>
-             <height>22</height>
+             <x>127</x>
+             <y>105</y>
+             <width>256</width>
+             <height>18</height>
             </rect>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>200</width>
+             <height>0</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>16777215</width>
+             <height>16777215</height>
+            </size>
            </property>
            <property name="styleSheet">
             <string notr="true">QLineEdit{
@@ -837,11 +931,29 @@ border-radius:4px;
           <widget class="QPushButton" name="pb_test_ip3">
            <property name="geometry">
             <rect>
-             <x>45</x>
-             <y>115</y>
-             <width>151</width>
-             <height>28</height>
+             <x>15</x>
+             <y>99</y>
+             <width>100</width>
+             <height>30</height>
             </rect>
+           </property>
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>100</width>
+             <height>30</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>110</width>
+             <height>30</height>
+            </size>
            </property>
            <property name="styleSheet">
             <string notr="true">
@@ -866,11 +978,23 @@ background-color: rgb(170, 179, 255);
           <widget class="QLineEdit" name="edit_ip1">
            <property name="geometry">
             <rect>
-             <x>210</x>
-             <y>30</y>
-             <width>396</width>
-             <height>22</height>
+             <x>127</x>
+             <y>31</y>
+             <width>256</width>
+             <height>18</height>
             </rect>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>200</width>
+             <height>0</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>16777215</width>
+             <height>16777215</height>
+            </size>
            </property>
            <property name="styleSheet">
             <string notr="true">QLineEdit{
@@ -889,11 +1013,29 @@ border-radius:4px;
           <widget class="QPushButton" name="pb_test_ip1">
            <property name="geometry">
             <rect>
-             <x>45</x>
+             <x>15</x>
              <y>25</y>
-             <width>151</width>
-             <height>28</height>
+             <width>100</width>
+             <height>30</height>
             </rect>
+           </property>
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>100</width>
+             <height>30</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>110</width>
+             <height>30</height>
+            </size>
            </property>
            <property name="styleSheet">
             <string notr="true">
@@ -918,11 +1060,23 @@ background-color: rgb(170, 179, 255);
           <widget class="QLineEdit" name="edit_ip4">
            <property name="geometry">
             <rect>
-             <x>210</x>
-             <y>165</y>
-             <width>396</width>
-             <height>22</height>
+             <x>127</x>
+             <y>142</y>
+             <width>256</width>
+             <height>18</height>
             </rect>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>200</width>
+             <height>0</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>16777215</width>
+             <height>16777215</height>
+            </size>
            </property>
            <property name="styleSheet">
             <string notr="true">QLineEdit{
@@ -942,11 +1096,29 @@ border-radius:4px;
           <widget class="QPushButton" name="pb_test_ip4">
            <property name="geometry">
             <rect>
-             <x>45</x>
-             <y>160</y>
-             <width>151</width>
-             <height>28</height>
+             <x>15</x>
+             <y>136</y>
+             <width>100</width>
+             <height>30</height>
             </rect>
+           </property>
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>100</width>
+             <height>30</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>110</width>
+             <height>30</height>
+            </size>
            </property>
            <property name="styleSheet">
             <string notr="true">
@@ -969,11 +1141,11 @@ background-color: rgb(170, 179, 255);
             <string>caméra IP4</string>
            </property>
           </widget>
-          <widget class="QLabel" name="label_5">
+          <widget class="QLabel" name="ledcam_ip3">
            <property name="geometry">
             <rect>
-             <x>630</x>
-             <y>120</y>
+             <x>395</x>
+             <y>104</y>
              <width>20</width>
              <height>20</height>
             </rect>
@@ -986,8 +1158,8 @@ background-color: rgb(170, 179, 255);
            </property>
            <property name="maximumSize">
             <size>
-             <width>25</width>
-             <height>25</height>
+             <width>20</width>
+             <height>20</height>
             </size>
            </property>
            <property name="styleSheet">
@@ -998,17 +1170,17 @@ border: 0px solid;</string>
             <string/>
            </property>
            <property name="pixmap">
-            <pixmap resource="../MediaPlayer/media.qrc">:/icones/icones/media/led_rouge.png</pixmap>
+            <pixmap resource="webcam.qrc">:/icones/icones/media/led_rouge.png</pixmap>
            </property>
            <property name="scaledContents">
             <bool>true</bool>
            </property>
           </widget>
-          <widget class="QLabel" name="label_6">
+          <widget class="QLabel" name="ledcam_ip2">
            <property name="geometry">
             <rect>
-             <x>630</x>
-             <y>75</y>
+             <x>395</x>
+             <y>67</y>
              <width>20</width>
              <height>20</height>
             </rect>
@@ -1021,8 +1193,8 @@ border: 0px solid;</string>
            </property>
            <property name="maximumSize">
             <size>
-             <width>25</width>
-             <height>25</height>
+             <width>20</width>
+             <height>20</height>
             </size>
            </property>
            <property name="styleSheet">
@@ -1033,16 +1205,16 @@ border: 0px solid;</string>
             <string/>
            </property>
            <property name="pixmap">
-            <pixmap resource="../MediaPlayer/media.qrc">:/icones/icones/media/led_rouge.png</pixmap>
+            <pixmap resource="webcam.qrc">:/icones/icones/media/led_rouge.png</pixmap>
            </property>
            <property name="scaledContents">
             <bool>true</bool>
            </property>
           </widget>
-          <widget class="QLabel" name="label_7">
+          <widget class="QLabel" name="ledcam_ip1">
            <property name="geometry">
             <rect>
-             <x>630</x>
+             <x>395</x>
              <y>30</y>
              <width>20</width>
              <height>20</height>
@@ -1056,8 +1228,8 @@ border: 0px solid;</string>
            </property>
            <property name="maximumSize">
             <size>
-             <width>25</width>
-             <height>25</height>
+             <width>20</width>
+             <height>20</height>
             </size>
            </property>
            <property name="styleSheet">
@@ -1068,17 +1240,17 @@ border: 0px solid;</string>
             <string/>
            </property>
            <property name="pixmap">
-            <pixmap resource="../MediaPlayer/media.qrc">:/icones/icones/media/led_rouge.png</pixmap>
+            <pixmap resource="webcam.qrc">:/icones/icones/media/led_rouge.png</pixmap>
            </property>
            <property name="scaledContents">
             <bool>true</bool>
            </property>
           </widget>
-          <widget class="QLabel" name="label_8">
+          <widget class="QLabel" name="ledcam_ip4">
            <property name="geometry">
             <rect>
-             <x>630</x>
-             <y>165</y>
+             <x>395</x>
+             <y>141</y>
              <width>20</width>
              <height>20</height>
             </rect>
@@ -1091,8 +1263,8 @@ border: 0px solid;</string>
            </property>
            <property name="maximumSize">
             <size>
-             <width>25</width>
-             <height>25</height>
+             <width>20</width>
+             <height>20</height>
             </size>
            </property>
            <property name="styleSheet">
@@ -1103,7 +1275,7 @@ border: 0px solid;</string>
             <string/>
            </property>
            <property name="pixmap">
-            <pixmap resource="../MediaPlayer/media.qrc">:/icones/icones/media/led_rouge.png</pixmap>
+            <pixmap resource="webcam.qrc">:/icones/icones/media/led_rouge.png</pixmap>
            </property>
            <property name="scaledContents">
             <bool>true</bool>
@@ -1114,9 +1286,9 @@ border: 0px solid;</string>
           <property name="geometry">
            <rect>
             <x>10</x>
-            <y>340</y>
-            <width>191</width>
-            <height>271</height>
+            <y>285</y>
+            <width>161</width>
+            <height>266</height>
            </rect>
           </property>
           <property name="styleSheet">
@@ -1129,13 +1301,13 @@ color: rgb(170, 107, 255);</string>
           </property>
           <layout class="QVBoxLayout" name="verticalLayout_2">
            <property name="leftMargin">
-            <number>20</number>
+            <number>17</number>
            </property>
            <property name="topMargin">
-            <number>15</number>
+            <number>25</number>
            </property>
            <property name="rightMargin">
-            <number>20</number>
+            <number>17</number>
            </property>
            <item>
             <widget class="QPushButton" name="pb_detect_res">
@@ -1201,6 +1373,11 @@ background-color: rgb(170, 179, 255);
                <height>32</height>
               </size>
              </property>
+             <property name="font">
+              <font>
+               <pointsize>8</pointsize>
+              </font>
+             </property>
              <property name="styleSheet">
               <string notr="true">color: rgb(255, 255, 255);
 border-color:transparent;</string>
@@ -1220,7 +1397,7 @@ border-color:transparent;</string>
              </property>
              <property name="font">
               <font>
-               <pointsize>10</pointsize>
+               <pointsize>8</pointsize>
               </font>
              </property>
              <property name="styleSheet">
@@ -1237,10 +1414,10 @@ border-color:transparent;</string>
          <widget class="QGroupBox" name="groupBox_5">
           <property name="geometry">
            <rect>
-            <x>890</x>
-            <y>5</y>
-            <width>261</width>
-            <height>606</height>
+            <x>615</x>
+            <y>185</y>
+            <width>181</width>
+            <height>366</height>
            </rect>
           </property>
           <property name="autoFillBackground">
@@ -1257,74 +1434,64 @@ color: rgb(170, 107, 255);</string>
           <property name="alignment">
            <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
           </property>
-          <widget class="QLabel" name="screen_2">
-           <property name="enabled">
-            <bool>true</bool>
+          <layout class="QVBoxLayout" name="verticalLayout_3">
+           <property name="spacing">
+            <number>4</number>
            </property>
-           <property name="geometry">
-            <rect>
-             <x>15</x>
-             <y>30</y>
-             <width>231</width>
-             <height>176</height>
-            </rect>
+           <property name="topMargin">
+            <number>17</number>
            </property>
-           <property name="styleSheet">
-            <string notr="true">background-color: rgb(0, 0, 0);</string>
-           </property>
-           <property name="text">
-            <string>webcam2</string>
-           </property>
-           <property name="alignment">
-            <set>Qt::AlignCenter</set>
-           </property>
-          </widget>
-          <widget class="QLabel" name="screen_3">
-           <property name="geometry">
-            <rect>
-             <x>15</x>
-             <y>225</y>
-             <width>231</width>
-             <height>176</height>
-            </rect>
-           </property>
-           <property name="styleSheet">
-            <string notr="true">background-color: rgb(0, 0, 0);</string>
-           </property>
-           <property name="text">
-            <string>webcam3 ou IP1 ou IP3</string>
-           </property>
-           <property name="alignment">
-            <set>Qt::AlignCenter</set>
-           </property>
-          </widget>
-          <widget class="QLabel" name="screen_4">
-           <property name="geometry">
-            <rect>
-             <x>15</x>
-             <y>415</y>
-             <width>231</width>
-             <height>176</height>
-            </rect>
-           </property>
-           <property name="styleSheet">
-            <string notr="true">background-color: rgb(0, 0, 0);</string>
-           </property>
-           <property name="text">
-            <string>webcam 4 ou IP2 ou IP4</string>
-           </property>
-           <property name="alignment">
-            <set>Qt::AlignCenter</set>
-           </property>
-          </widget>
+           <item>
+            <widget class="QLabel" name="screen_2">
+             <property name="enabled">
+              <bool>true</bool>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">background-color: rgb(0, 0, 0);</string>
+             </property>
+             <property name="text">
+              <string>webcam2</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignCenter</set>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLabel" name="screen_3">
+             <property name="styleSheet">
+              <string notr="true">background-color: rgb(0, 0, 0);</string>
+             </property>
+             <property name="text">
+              <string>webcam3 ou IP1 ou IP3</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignCenter</set>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLabel" name="screen_4">
+             <property name="styleSheet">
+              <string notr="true">background-color: rgb(0, 0, 0);</string>
+             </property>
+             <property name="text">
+              <string>webcam 4 ou IP2 ou IP4</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignCenter</set>
+             </property>
+            </widget>
+           </item>
+          </layout>
          </widget>
          <widget class="QGroupBox" name="groupBox_6">
           <property name="geometry">
            <rect>
-            <x>210</x>
-            <y>5</y>
-            <width>671</width>
-            <height>186</height>
+            <x>180</x>
+            <y>0</y>
+            <width>616</width>
+            <height>176</height>
            </rect>
           </property>
           <property name="styleSheet">
@@ -1338,9 +1505,9 @@ color: rgb(170, 107, 255);</string>
           <widget class="QSlider" name="slider_nb_window">
            <property name="geometry">
             <rect>
-             <x>50</x>
-             <y>75</y>
-             <width>130</width>
+             <x>16</x>
+             <y>74</y>
+             <width>124</width>
              <height>16</height>
             </rect>
            </property>
@@ -1435,10 +1602,10 @@ border-radius: 4px;
           <widget class="QLabel" name="lbl_nb_window">
            <property name="geometry">
             <rect>
-             <x>50</x>
-             <y>45</y>
-             <width>121</width>
-             <height>17</height>
+             <x>16</x>
+             <y>37</y>
+             <width>80</width>
+             <height>16</height>
             </rect>
            </property>
            <property name="maximumSize">
@@ -1466,17 +1633,35 @@ border: 0px solid;</string>
           <widget class="QPushButton" name="pb_webcam2">
            <property name="geometry">
             <rect>
-             <x>210</x>
-             <y>55</y>
-             <width>151</width>
-             <height>28</height>
+             <x>212</x>
+             <y>54</y>
+             <width>100</width>
+             <height>30</height>
             </rect>
+           </property>
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Minimum" vsizetype="Expanding">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>100</width>
+             <height>30</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>100</width>
+             <height>30</height>
+            </size>
            </property>
            <property name="styleSheet">
             <string notr="true">
 QPushButton{
 border:1px solid rgb(170, 170, 255);
-border-radius:8px;
+border-radius:4px;
 color: white;
 }
 
@@ -1495,17 +1680,35 @@ background-color: rgb(170, 179, 255);
           <widget class="QPushButton" name="pb_webcam1">
            <property name="geometry">
             <rect>
-             <x>210</x>
-             <y>15</y>
-             <width>151</width>
-             <height>28</height>
+             <x>212</x>
+             <y>14</y>
+             <width>100</width>
+             <height>30</height>
             </rect>
+           </property>
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>100</width>
+             <height>30</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>100</width>
+             <height>30</height>
+            </size>
            </property>
            <property name="styleSheet">
             <string notr="true">
 QPushButton{
 border:1px solid rgb(170, 170, 255);
-border-radius:8px;
+border-radius:4px;
 color: white;
 }
 
@@ -1524,17 +1727,35 @@ background-color: rgb(170, 179, 255);
           <widget class="QPushButton" name="pb_webcam4">
            <property name="geometry">
             <rect>
-             <x>210</x>
-             <y>135</y>
-             <width>151</width>
-             <height>28</height>
+             <x>212</x>
+             <y>134</y>
+             <width>100</width>
+             <height>30</height>
             </rect>
+           </property>
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Minimum" vsizetype="Expanding">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>100</width>
+             <height>30</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>100</width>
+             <height>30</height>
+            </size>
            </property>
            <property name="styleSheet">
             <string notr="true">
 QPushButton{
 border:1px solid rgb(170, 170, 255);
-border-radius:8px;
+border-radius:4px;
 color: white;
 }
 
@@ -1554,17 +1775,35 @@ background-color: rgb(170, 179, 255);
           <widget class="QPushButton" name="pb_webcam3">
            <property name="geometry">
             <rect>
-             <x>210</x>
-             <y>95</y>
-             <width>151</width>
-             <height>28</height>
+             <x>212</x>
+             <y>94</y>
+             <width>100</width>
+             <height>30</height>
             </rect>
+           </property>
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Minimum" vsizetype="Expanding">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>100</width>
+             <height>30</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>100</width>
+             <height>30</height>
+            </size>
            </property>
            <property name="styleSheet">
             <string notr="true">
 QPushButton{
 border:1px solid rgb(170, 170, 255);
-border-radius:8px;
+border-radius:4px;
 color: white;
 }
 
@@ -1580,30 +1819,13 @@ background-color: rgb(170, 179, 255);
             <string>webcam3</string>
            </property>
           </widget>
-          <widget class="QCheckBox" name="chk_inverse">
-           <property name="geometry">
-            <rect>
-             <x>50</x>
-             <y>115</y>
-             <width>131</width>
-             <height>16</height>
-            </rect>
-           </property>
-           <property name="styleSheet">
-            <string notr="true">color: rgb(255, 255, 255);
-border: 0px solid;</string>
-           </property>
-           <property name="text">
-            <string>Inverser l'écran</string>
-           </property>
-          </widget>
           <widget class="QLabel" name="screen">
            <property name="geometry">
             <rect>
-             <x>425</x>
+             <x>380</x>
              <y>5</y>
-             <width>231</width>
-             <height>176</height>
+             <width>226</width>
+             <height>166</height>
             </rect>
            </property>
            <property name="styleSheet">
@@ -1616,12 +1838,12 @@ border: 0px solid;</string>
             <set>Qt::AlignCenter</set>
            </property>
           </widget>
-          <widget class="QLabel" name="label">
+          <widget class="QLabel" name="ledcam1">
            <property name="geometry">
             <rect>
-             <x>375</x>
+             <x>320</x>
              <y>20</y>
-             <width>20</width>
+             <width>21</width>
              <height>20</height>
             </rect>
            </property>
@@ -1633,8 +1855,8 @@ border: 0px solid;</string>
            </property>
            <property name="maximumSize">
             <size>
-             <width>25</width>
-             <height>25</height>
+             <width>21</width>
+             <height>20</height>
             </size>
            </property>
            <property name="styleSheet">
@@ -1645,17 +1867,17 @@ border: 0px solid;</string>
             <string/>
            </property>
            <property name="pixmap">
-            <pixmap resource="../MediaPlayer/media.qrc">:/icones/icones/media/led_rouge.png</pixmap>
+            <pixmap resource="webcam.qrc">:/icones/icones/media/led_rouge.png</pixmap>
            </property>
            <property name="scaledContents">
             <bool>true</bool>
            </property>
           </widget>
-          <widget class="QLabel" name="label_2">
+          <widget class="QLabel" name="ledcam2">
            <property name="geometry">
             <rect>
-             <x>375</x>
-             <y>60</y>
+             <x>320</x>
+             <y>59</y>
              <width>20</width>
              <height>20</height>
             </rect>
@@ -1668,8 +1890,8 @@ border: 0px solid;</string>
            </property>
            <property name="maximumSize">
             <size>
-             <width>25</width>
-             <height>25</height>
+             <width>20</width>
+             <height>20</height>
             </size>
            </property>
            <property name="styleSheet">
@@ -1680,17 +1902,17 @@ border: 0px solid;</string>
             <string/>
            </property>
            <property name="pixmap">
-            <pixmap resource="../MediaPlayer/media.qrc">:/icones/icones/media/led_rouge.png</pixmap>
+            <pixmap resource="webcam.qrc">:/icones/icones/media/led_rouge.png</pixmap>
            </property>
            <property name="scaledContents">
             <bool>true</bool>
            </property>
           </widget>
-          <widget class="QLabel" name="label_3">
+          <widget class="QLabel" name="ledcam3">
            <property name="geometry">
             <rect>
-             <x>375</x>
-             <y>100</y>
+             <x>320</x>
+             <y>99</y>
              <width>20</width>
              <height>20</height>
             </rect>
@@ -1703,8 +1925,8 @@ border: 0px solid;</string>
            </property>
            <property name="maximumSize">
             <size>
-             <width>25</width>
-             <height>25</height>
+             <width>20</width>
+             <height>20</height>
             </size>
            </property>
            <property name="styleSheet">
@@ -1715,17 +1937,17 @@ border: 0px solid;</string>
             <string/>
            </property>
            <property name="pixmap">
-            <pixmap resource="../MediaPlayer/media.qrc">:/icones/icones/media/led_rouge.png</pixmap>
+            <pixmap resource="webcam.qrc">:/icones/icones/media/led_rouge.png</pixmap>
            </property>
            <property name="scaledContents">
             <bool>true</bool>
            </property>
           </widget>
-          <widget class="QLabel" name="label_4">
+          <widget class="QLabel" name="ledcam4">
            <property name="geometry">
             <rect>
-             <x>375</x>
-             <y>140</y>
+             <x>320</x>
+             <y>139</y>
              <width>20</width>
              <height>20</height>
             </rect>
@@ -1738,8 +1960,8 @@ border: 0px solid;</string>
            </property>
            <property name="maximumSize">
             <size>
-             <width>25</width>
-             <height>25</height>
+             <width>20</width>
+             <height>20</height>
             </size>
            </property>
            <property name="styleSheet">
@@ -1750,7 +1972,7 @@ border: 0px solid;</string>
             <string/>
            </property>
            <property name="pixmap">
-            <pixmap resource="../MediaPlayer/media.qrc">:/icones/icones/media/led_rouge.png</pixmap>
+            <pixmap resource="webcam.qrc">:/icones/icones/media/led_rouge.png</pixmap>
            </property>
            <property name="scaledContents">
             <bool>true</bool>
@@ -1760,16 +1982,64 @@ border: 0px solid;</string>
          <widget class="QWidget" name="layoutWidget">
           <property name="geometry">
            <rect>
-            <x>10</x>
-            <y>625</y>
-            <width>1076</width>
-            <height>37</height>
+            <x>5</x>
+            <y>555</y>
+            <width>801</width>
+            <height>41</height>
            </rect>
           </property>
           <layout class="QGridLayout" name="gridLayout">
-           <property name="horizontalSpacing">
-            <number>11</number>
+           <property name="spacing">
+            <number>0</number>
            </property>
+           <item row="0" column="2">
+            <spacer name="horizontalSpacer_3">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>40</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item row="0" column="3">
+            <widget class="QPushButton" name="pb_cancel">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="minimumSize">
+              <size>
+               <width>45</width>
+               <height>35</height>
+              </size>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">
+QPushButton{
+border:1px solid rgb(170, 170, 255);
+border-radius:8px;
+color: white;
+}
+
+QPushButton:hover{
+border-color: white;
+}
+
+QPushButton:pressed{
+background-color: rgb(170, 179, 255);
+}</string>
+             </property>
+             <property name="text">
+              <string>Annuler</string>
+             </property>
+            </widget>
+           </item>
            <item row="0" column="1">
             <widget class="QPushButton" name="pb_apply">
              <property name="sizePolicy">
@@ -1831,54 +2101,6 @@ background-color: rgb(170, 179, 255);
              </property>
             </spacer>
            </item>
-           <item row="0" column="3">
-            <widget class="QPushButton" name="pb_cancel">
-             <property name="sizePolicy">
-              <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
-               <horstretch>0</horstretch>
-               <verstretch>0</verstretch>
-              </sizepolicy>
-             </property>
-             <property name="minimumSize">
-              <size>
-               <width>45</width>
-               <height>35</height>
-              </size>
-             </property>
-             <property name="styleSheet">
-              <string notr="true">
-QPushButton{
-border:1px solid rgb(170, 170, 255);
-border-radius:8px;
-color: white;
-}
-
-QPushButton:hover{
-border-color: white;
-}
-
-QPushButton:pressed{
-background-color: rgb(170, 179, 255);
-}</string>
-             </property>
-             <property name="text">
-              <string>Annuler</string>
-             </property>
-            </widget>
-           </item>
-           <item row="0" column="2">
-            <spacer name="horizontalSpacer_3">
-             <property name="orientation">
-              <enum>Qt::Horizontal</enum>
-             </property>
-             <property name="sizeHint" stdset="0">
-              <size>
-               <width>40</width>
-               <height>20</height>
-              </size>
-             </property>
-            </spacer>
-           </item>
           </layout>
          </widget>
         </widget>
@@ -1890,7 +2112,7 @@ background-color: rgb(170, 179, 255);
   </widget>
  </widget>
  <resources>
-  <include location="../MediaPlayer/media.qrc"/>
+  <include location="webcam.qrc"/>
  </resources>
  <connections/>
 </ui>

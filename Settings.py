@@ -14,7 +14,7 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_Settings(object):
     def setupUi(self, Settings):
         Settings.setObjectName("Settings")
-        Settings.resize(1194, 754)
+        Settings.resize(827, 666)
         self.centralwidget = QtWidgets.QWidget(Settings)
         self.centralwidget.setObjectName("centralwidget")
         self.horizontalLayout = QtWidgets.QHBoxLayout(self.centralwidget)
@@ -30,10 +30,10 @@ class Ui_Settings(object):
         self.verticalLayout.setContentsMargins(0, -1, 0, -1)
         self.verticalLayout.setObjectName("verticalLayout")
         self.widget = QtWidgets.QWidget(self.frame)
-        self.widget.setMaximumSize(QtCore.QSize(16777215, 40))
+        self.widget.setMaximumSize(QtCore.QSize(16777215, 31))
         self.widget.setObjectName("widget")
         self.pushButton_close = QtWidgets.QPushButton(self.widget)
-        self.pushButton_close.setGeometry(QtCore.QRect(20, 0, 41, 30))
+        self.pushButton_close.setGeometry(QtCore.QRect(15, 0, 25, 25))
         font = QtGui.QFont()
         font.setFamily("Webdings")
         font.setPointSize(10)
@@ -42,6 +42,7 @@ class Ui_Settings(object):
 "color: rgb(255, 255, 255);\n"
 "background-color: rgb(255, 0, 0);\n"
 "border: 1px solid rgb(85, 0, 0);\n"
+"border-radius:4px;\n"
 "}\n"
 "\n"
 "QPushButton:hover{\n"
@@ -53,17 +54,15 @@ class Ui_Settings(object):
 "}")
         self.pushButton_close.setObjectName("pushButton_close")
         self.pushButton_maxi = QtWidgets.QPushButton(self.widget)
-        self.pushButton_maxi.setGeometry(QtCore.QRect(80, 0, 41, 30))
+        self.pushButton_maxi.setGeometry(QtCore.QRect(45, 0, 25, 25))
         font = QtGui.QFont()
         font.setFamily("Webdings")
         font.setPointSize(10)
         self.pushButton_maxi.setFont(font)
-        self.pushButton_maxi.setStyleSheet("\n"
-"\n"
-"\n"
-"QPushButton{\n"
+        self.pushButton_maxi.setStyleSheet("QPushButton{\n"
 "background-color: rgb(85, 170, 255);\n"
 "border: 1px solid blue;\n"
+"border-radius:4px;\n"
 "}\n"
 "\n"
 "QPushButton:hover{\n"
@@ -81,18 +80,18 @@ class Ui_Settings(object):
         self.widget_2.setStyleSheet("background-color: transparent;")
         self.widget_2.setObjectName("widget_2")
         self.groupBox = QtWidgets.QGroupBox(self.widget_2)
-        self.groupBox.setGeometry(QtCore.QRect(10, 5, 191, 321))
+        self.groupBox.setGeometry(QtCore.QRect(10, 0, 161, 266))
         self.groupBox.setStyleSheet("border:1px solid rgb(170, 170, 255);\n"
 "border-radius:8px;\n"
 "color: rgb(170, 107, 255);")
         self.groupBox.setObjectName("groupBox")
         self.chk_adjust = QtWidgets.QCheckBox(self.groupBox)
-        self.chk_adjust.setGeometry(QtCore.QRect(35, 35, 117, 16))
+        self.chk_adjust.setGeometry(QtCore.QRect(30, 35, 117, 16))
         self.chk_adjust.setStyleSheet("color: rgb(255, 255, 255);\n"
 "border: 0px solid;")
         self.chk_adjust.setObjectName("chk_adjust")
         self.lbl_saturation = QtWidgets.QLabel(self.groupBox)
-        self.lbl_saturation.setGeometry(QtCore.QRect(35, 240, 121, 17))
+        self.lbl_saturation.setGeometry(QtCore.QRect(30, 209, 121, 17))
         self.lbl_saturation.setMaximumSize(QtCore.QSize(16777215, 17))
         font = QtGui.QFont()
         font.setPointSize(9)
@@ -102,7 +101,7 @@ class Ui_Settings(object):
         self.lbl_saturation.setAlignment(QtCore.Qt.AlignBottom|QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft)
         self.lbl_saturation.setObjectName("lbl_saturation")
         self.lbl_contraste = QtWidgets.QLabel(self.groupBox)
-        self.lbl_contraste.setGeometry(QtCore.QRect(35, 161, 126, 17))
+        self.lbl_contraste.setGeometry(QtCore.QRect(30, 155, 126, 17))
         self.lbl_contraste.setMaximumSize(QtCore.QSize(16777215, 17))
         font = QtGui.QFont()
         font.setPointSize(9)
@@ -112,7 +111,7 @@ class Ui_Settings(object):
         self.lbl_contraste.setAlignment(QtCore.Qt.AlignBottom|QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft)
         self.lbl_contraste.setObjectName("lbl_contraste")
         self.slider_contraste = QtWidgets.QSlider(self.groupBox)
-        self.slider_contraste.setGeometry(QtCore.QRect(35, 186, 130, 16))
+        self.slider_contraste.setGeometry(QtCore.QRect(30, 180, 96, 16))
         self.slider_contraste.setMinimumSize(QtCore.QSize(0, 0))
         self.slider_contraste.setMaximumSize(QtCore.QSize(180, 16))
         self.slider_contraste.setStyleSheet("QSlider{\n"
@@ -178,7 +177,7 @@ class Ui_Settings(object):
         self.slider_contraste.setOrientation(QtCore.Qt.Horizontal)
         self.slider_contraste.setObjectName("slider_contraste")
         self.slider_brillance = QtWidgets.QSlider(self.groupBox)
-        self.slider_brillance.setGeometry(QtCore.QRect(35, 106, 130, 16))
+        self.slider_brillance.setGeometry(QtCore.QRect(30, 126, 96, 16))
         self.slider_brillance.setMinimumSize(QtCore.QSize(0, 0))
         self.slider_brillance.setMaximumSize(QtCore.QSize(180, 16))
         self.slider_brillance.setStyleSheet("QSlider{\n"
@@ -244,7 +243,7 @@ class Ui_Settings(object):
         self.slider_brillance.setOrientation(QtCore.Qt.Horizontal)
         self.slider_brillance.setObjectName("slider_brillance")
         self.lbl_brillance = QtWidgets.QLabel(self.groupBox)
-        self.lbl_brillance.setGeometry(QtCore.QRect(35, 80, 126, 18))
+        self.lbl_brillance.setGeometry(QtCore.QRect(30, 100, 126, 18))
         self.lbl_brillance.setMinimumSize(QtCore.QSize(0, 0))
         self.lbl_brillance.setMaximumSize(QtCore.QSize(16777215, 19))
         font = QtGui.QFont()
@@ -255,7 +254,7 @@ class Ui_Settings(object):
         self.lbl_brillance.setAlignment(QtCore.Qt.AlignBottom|QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft)
         self.lbl_brillance.setObjectName("lbl_brillance")
         self.slider_saturation = QtWidgets.QSlider(self.groupBox)
-        self.slider_saturation.setGeometry(QtCore.QRect(35, 266, 130, 16))
+        self.slider_saturation.setGeometry(QtCore.QRect(30, 235, 96, 16))
         self.slider_saturation.setMinimumSize(QtCore.QSize(0, 0))
         self.slider_saturation.setMaximumSize(QtCore.QSize(180, 16))
         self.slider_saturation.setStyleSheet("QSlider{\n"
@@ -320,14 +319,19 @@ class Ui_Settings(object):
         self.slider_saturation.setProperty("value", 100)
         self.slider_saturation.setOrientation(QtCore.Qt.Horizontal)
         self.slider_saturation.setObjectName("slider_saturation")
+        self.chk_inverse = QtWidgets.QCheckBox(self.groupBox)
+        self.chk_inverse.setGeometry(QtCore.QRect(30, 60, 102, 16))
+        self.chk_inverse.setStyleSheet("color: rgb(255, 255, 255);\n"
+"border: 0px solid;")
+        self.chk_inverse.setObjectName("chk_inverse")
         self.groupBox_2 = QtWidgets.QGroupBox(self.widget_2)
-        self.groupBox_2.setGeometry(QtCore.QRect(210, 200, 671, 196))
+        self.groupBox_2.setGeometry(QtCore.QRect(180, 185, 426, 176))
         self.groupBox_2.setStyleSheet("border:1px solid rgb(170, 170, 255);\n"
 "border-radius:8px;\n"
 "color: rgb(170, 107, 255);")
         self.groupBox_2.setObjectName("groupBox_2")
         self.edit_image = QtWidgets.QLineEdit(self.groupBox_2)
-        self.edit_image.setGeometry(QtCore.QRect(210, 110, 396, 22))
+        self.edit_image.setGeometry(QtCore.QRect(125, 92, 286, 18))
         self.edit_image.setStyleSheet("QLineEdit{\n"
 "background-color: rgb(255, 255, 255);\n"
 "border: 1px solid rgb(170, 85, 255) ;\n"
@@ -337,7 +341,14 @@ class Ui_Settings(object):
         self.edit_image.setClearButtonEnabled(True)
         self.edit_image.setObjectName("edit_image")
         self.pb_dir_image = QtWidgets.QPushButton(self.groupBox_2)
-        self.pb_dir_image.setGeometry(QtCore.QRect(45, 105, 151, 28))
+        self.pb_dir_image.setGeometry(QtCore.QRect(15, 86, 100, 30))
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.pb_dir_image.sizePolicy().hasHeightForWidth())
+        self.pb_dir_image.setSizePolicy(sizePolicy)
+        self.pb_dir_image.setMinimumSize(QtCore.QSize(100, 30))
+        self.pb_dir_image.setMaximumSize(QtCore.QSize(100, 30))
         self.pb_dir_image.setStyleSheet("\n"
 "QPushButton{\n"
 "border:1px solid rgb(170, 170, 255);\n"
@@ -354,7 +365,7 @@ class Ui_Settings(object):
 "}")
         self.pb_dir_image.setObjectName("pb_dir_image")
         self.edit_video = QtWidgets.QLineEdit(self.groupBox_2)
-        self.edit_video.setGeometry(QtCore.QRect(210, 155, 396, 22))
+        self.edit_video.setGeometry(QtCore.QRect(125, 131, 286, 18))
         self.edit_video.setStyleSheet("QLineEdit{\n"
 "background-color: rgb(255, 255, 255);\n"
 "border: 1px solid rgb(170, 85, 255) ;\n"
@@ -364,7 +375,14 @@ class Ui_Settings(object):
         self.edit_video.setClearButtonEnabled(True)
         self.edit_video.setObjectName("edit_video")
         self.pb_dir_video = QtWidgets.QPushButton(self.groupBox_2)
-        self.pb_dir_video.setGeometry(QtCore.QRect(45, 150, 151, 28))
+        self.pb_dir_video.setGeometry(QtCore.QRect(15, 125, 100, 30))
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.pb_dir_video.sizePolicy().hasHeightForWidth())
+        self.pb_dir_video.setSizePolicy(sizePolicy)
+        self.pb_dir_video.setMinimumSize(QtCore.QSize(100, 30))
+        self.pb_dir_video.setMaximumSize(QtCore.QSize(100, 30))
         self.pb_dir_video.setStyleSheet("\n"
 "QPushButton{\n"
 "border:1px solid rgb(170, 170, 255);\n"
@@ -381,17 +399,17 @@ class Ui_Settings(object):
 "}")
         self.pb_dir_video.setObjectName("pb_dir_video")
         self.chk_image_horodate = QtWidgets.QCheckBox(self.groupBox_2)
-        self.chk_image_horodate.setGeometry(QtCore.QRect(45, 30, 221, 16))
+        self.chk_image_horodate.setGeometry(QtCore.QRect(15, 34, 195, 16))
         self.chk_image_horodate.setStyleSheet("color: rgb(255, 255, 255);\n"
 "border: 0px solid;")
         self.chk_image_horodate.setObjectName("chk_image_horodate")
         self.chk_video_horodate = QtWidgets.QCheckBox(self.groupBox_2)
-        self.chk_video_horodate.setGeometry(QtCore.QRect(45, 65, 211, 16))
+        self.chk_video_horodate.setGeometry(QtCore.QRect(15, 61, 192, 16))
         self.chk_video_horodate.setStyleSheet("color: rgb(255, 255, 255);\n"
 "border: 0px solid;")
         self.chk_video_horodate.setObjectName("chk_video_horodate")
         self.edit_filename_image = QtWidgets.QLineEdit(self.groupBox_2)
-        self.edit_filename_image.setGeometry(QtCore.QRect(275, 25, 331, 22))
+        self.edit_filename_image.setGeometry(QtCore.QRect(225, 32, 186, 18))
         self.edit_filename_image.setStyleSheet("QLineEdit{\n"
 "background-color: rgb(255, 255, 255);\n"
 "border: 1px solid rgb(170, 85, 255) ;\n"
@@ -401,7 +419,7 @@ class Ui_Settings(object):
         self.edit_filename_image.setObjectName("edit_filename_image")
         self.edit_filename_video = QtWidgets.QLineEdit(self.groupBox_2)
         self.edit_filename_video.setEnabled(True)
-        self.edit_filename_video.setGeometry(QtCore.QRect(275, 65, 331, 22))
+        self.edit_filename_video.setGeometry(QtCore.QRect(225, 59, 186, 18))
         self.edit_filename_video.setStyleSheet("QLineEdit{\n"
 "background-color: rgb(255, 255, 255);\n"
 "border: 1px solid rgb(170, 85, 255) ;\n"
@@ -411,13 +429,15 @@ class Ui_Settings(object):
         self.edit_filename_video.setClearButtonEnabled(True)
         self.edit_filename_video.setObjectName("edit_filename_video")
         self.groupBox_3 = QtWidgets.QGroupBox(self.widget_2)
-        self.groupBox_3.setGeometry(QtCore.QRect(210, 405, 671, 206))
+        self.groupBox_3.setGeometry(QtCore.QRect(180, 370, 426, 181))
         self.groupBox_3.setStyleSheet("border:1px solid rgb(170, 170, 255);\n"
 "border-radius:8px;\n"
 "color: rgb(170, 107, 255);")
         self.groupBox_3.setObjectName("groupBox_3")
         self.edit_ip2 = QtWidgets.QLineEdit(self.groupBox_3)
-        self.edit_ip2.setGeometry(QtCore.QRect(210, 75, 396, 22))
+        self.edit_ip2.setGeometry(QtCore.QRect(127, 68, 256, 18))
+        self.edit_ip2.setMinimumSize(QtCore.QSize(200, 0))
+        self.edit_ip2.setMaximumSize(QtCore.QSize(16777215, 16777215))
         self.edit_ip2.setStyleSheet("QLineEdit{\n"
 "background-color: rgb(255, 255, 255);\n"
 "border: 1px solid rgb(170, 85, 255) ;\n"
@@ -427,7 +447,14 @@ class Ui_Settings(object):
         self.edit_ip2.setClearButtonEnabled(True)
         self.edit_ip2.setObjectName("edit_ip2")
         self.pb_test_ip2 = QtWidgets.QPushButton(self.groupBox_3)
-        self.pb_test_ip2.setGeometry(QtCore.QRect(45, 70, 151, 28))
+        self.pb_test_ip2.setGeometry(QtCore.QRect(15, 62, 100, 30))
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Expanding)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.pb_test_ip2.sizePolicy().hasHeightForWidth())
+        self.pb_test_ip2.setSizePolicy(sizePolicy)
+        self.pb_test_ip2.setMinimumSize(QtCore.QSize(100, 30))
+        self.pb_test_ip2.setMaximumSize(QtCore.QSize(110, 30))
         self.pb_test_ip2.setStyleSheet("\n"
 "QPushButton{\n"
 "border:1px solid rgb(170, 170, 255);\n"
@@ -444,7 +471,9 @@ class Ui_Settings(object):
 "}")
         self.pb_test_ip2.setObjectName("pb_test_ip2")
         self.edit_ip3 = QtWidgets.QLineEdit(self.groupBox_3)
-        self.edit_ip3.setGeometry(QtCore.QRect(210, 120, 396, 22))
+        self.edit_ip3.setGeometry(QtCore.QRect(127, 105, 256, 18))
+        self.edit_ip3.setMinimumSize(QtCore.QSize(200, 0))
+        self.edit_ip3.setMaximumSize(QtCore.QSize(16777215, 16777215))
         self.edit_ip3.setStyleSheet("QLineEdit{\n"
 "background-color: rgb(255, 255, 255);\n"
 "border: 1px solid rgb(170, 85, 255) ;\n"
@@ -455,7 +484,14 @@ class Ui_Settings(object):
         self.edit_ip3.setClearButtonEnabled(True)
         self.edit_ip3.setObjectName("edit_ip3")
         self.pb_test_ip3 = QtWidgets.QPushButton(self.groupBox_3)
-        self.pb_test_ip3.setGeometry(QtCore.QRect(45, 115, 151, 28))
+        self.pb_test_ip3.setGeometry(QtCore.QRect(15, 99, 100, 30))
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Expanding)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.pb_test_ip3.sizePolicy().hasHeightForWidth())
+        self.pb_test_ip3.setSizePolicy(sizePolicy)
+        self.pb_test_ip3.setMinimumSize(QtCore.QSize(100, 30))
+        self.pb_test_ip3.setMaximumSize(QtCore.QSize(110, 30))
         self.pb_test_ip3.setStyleSheet("\n"
 "QPushButton{\n"
 "border:1px solid rgb(170, 170, 255);\n"
@@ -472,7 +508,9 @@ class Ui_Settings(object):
 "}")
         self.pb_test_ip3.setObjectName("pb_test_ip3")
         self.edit_ip1 = QtWidgets.QLineEdit(self.groupBox_3)
-        self.edit_ip1.setGeometry(QtCore.QRect(210, 30, 396, 22))
+        self.edit_ip1.setGeometry(QtCore.QRect(127, 31, 256, 18))
+        self.edit_ip1.setMinimumSize(QtCore.QSize(200, 0))
+        self.edit_ip1.setMaximumSize(QtCore.QSize(16777215, 16777215))
         self.edit_ip1.setStyleSheet("QLineEdit{\n"
 "background-color: rgb(255, 255, 255);\n"
 "border: 1px solid rgb(170, 85, 255) ;\n"
@@ -482,7 +520,14 @@ class Ui_Settings(object):
         self.edit_ip1.setClearButtonEnabled(True)
         self.edit_ip1.setObjectName("edit_ip1")
         self.pb_test_ip1 = QtWidgets.QPushButton(self.groupBox_3)
-        self.pb_test_ip1.setGeometry(QtCore.QRect(45, 25, 151, 28))
+        self.pb_test_ip1.setGeometry(QtCore.QRect(15, 25, 100, 30))
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Expanding)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.pb_test_ip1.sizePolicy().hasHeightForWidth())
+        self.pb_test_ip1.setSizePolicy(sizePolicy)
+        self.pb_test_ip1.setMinimumSize(QtCore.QSize(100, 30))
+        self.pb_test_ip1.setMaximumSize(QtCore.QSize(110, 30))
         self.pb_test_ip1.setStyleSheet("\n"
 "QPushButton{\n"
 "border:1px solid rgb(170, 170, 255);\n"
@@ -499,7 +544,9 @@ class Ui_Settings(object):
 "}")
         self.pb_test_ip1.setObjectName("pb_test_ip1")
         self.edit_ip4 = QtWidgets.QLineEdit(self.groupBox_3)
-        self.edit_ip4.setGeometry(QtCore.QRect(210, 165, 396, 22))
+        self.edit_ip4.setGeometry(QtCore.QRect(127, 142, 256, 18))
+        self.edit_ip4.setMinimumSize(QtCore.QSize(200, 0))
+        self.edit_ip4.setMaximumSize(QtCore.QSize(16777215, 16777215))
         self.edit_ip4.setStyleSheet("QLineEdit{\n"
 "background-color: rgb(255, 255, 255);\n"
 "border: 1px solid rgb(170, 85, 255) ;\n"
@@ -510,7 +557,14 @@ class Ui_Settings(object):
         self.edit_ip4.setClearButtonEnabled(True)
         self.edit_ip4.setObjectName("edit_ip4")
         self.pb_test_ip4 = QtWidgets.QPushButton(self.groupBox_3)
-        self.pb_test_ip4.setGeometry(QtCore.QRect(45, 160, 151, 28))
+        self.pb_test_ip4.setGeometry(QtCore.QRect(15, 136, 100, 30))
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Expanding)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.pb_test_ip4.sizePolicy().hasHeightForWidth())
+        self.pb_test_ip4.setSizePolicy(sizePolicy)
+        self.pb_test_ip4.setMinimumSize(QtCore.QSize(100, 30))
+        self.pb_test_ip4.setMaximumSize(QtCore.QSize(110, 30))
         self.pb_test_ip4.setStyleSheet("\n"
 "QPushButton{\n"
 "border:1px solid rgb(170, 170, 255);\n"
@@ -527,54 +581,54 @@ class Ui_Settings(object):
 "\n"
 "}")
         self.pb_test_ip4.setObjectName("pb_test_ip4")
-        self.label_5 = QtWidgets.QLabel(self.groupBox_3)
-        self.label_5.setGeometry(QtCore.QRect(630, 120, 20, 20))
-        self.label_5.setMinimumSize(QtCore.QSize(20, 20))
-        self.label_5.setMaximumSize(QtCore.QSize(25, 25))
-        self.label_5.setStyleSheet("color: rgb(255, 255, 255);\n"
+        self.ledcam_ip3 = QtWidgets.QLabel(self.groupBox_3)
+        self.ledcam_ip3.setGeometry(QtCore.QRect(395, 104, 20, 20))
+        self.ledcam_ip3.setMinimumSize(QtCore.QSize(20, 20))
+        self.ledcam_ip3.setMaximumSize(QtCore.QSize(20, 20))
+        self.ledcam_ip3.setStyleSheet("color: rgb(255, 255, 255);\n"
 "border: 0px solid;")
-        self.label_5.setText("")
-        self.label_5.setPixmap(QtGui.QPixmap(":/icones/icones/media/led_rouge.png"))
-        self.label_5.setScaledContents(True)
-        self.label_5.setObjectName("label_5")
-        self.label_6 = QtWidgets.QLabel(self.groupBox_3)
-        self.label_6.setGeometry(QtCore.QRect(630, 75, 20, 20))
-        self.label_6.setMinimumSize(QtCore.QSize(20, 20))
-        self.label_6.setMaximumSize(QtCore.QSize(25, 25))
-        self.label_6.setStyleSheet("color: rgb(255, 255, 255);\n"
+        self.ledcam_ip3.setText("")
+        self.ledcam_ip3.setPixmap(QtGui.QPixmap(":/icones/icones/media/led_rouge.png"))
+        self.ledcam_ip3.setScaledContents(True)
+        self.ledcam_ip3.setObjectName("ledcam_ip3")
+        self.ledcam_ip2 = QtWidgets.QLabel(self.groupBox_3)
+        self.ledcam_ip2.setGeometry(QtCore.QRect(395, 67, 20, 20))
+        self.ledcam_ip2.setMinimumSize(QtCore.QSize(20, 20))
+        self.ledcam_ip2.setMaximumSize(QtCore.QSize(20, 20))
+        self.ledcam_ip2.setStyleSheet("color: rgb(255, 255, 255);\n"
 "border: 0px solid;")
-        self.label_6.setText("")
-        self.label_6.setPixmap(QtGui.QPixmap(":/icones/icones/media/led_rouge.png"))
-        self.label_6.setScaledContents(True)
-        self.label_6.setObjectName("label_6")
-        self.label_7 = QtWidgets.QLabel(self.groupBox_3)
-        self.label_7.setGeometry(QtCore.QRect(630, 30, 20, 20))
-        self.label_7.setMinimumSize(QtCore.QSize(20, 20))
-        self.label_7.setMaximumSize(QtCore.QSize(25, 25))
-        self.label_7.setStyleSheet("color: rgb(255, 255, 255);\n"
+        self.ledcam_ip2.setText("")
+        self.ledcam_ip2.setPixmap(QtGui.QPixmap(":/icones/icones/media/led_rouge.png"))
+        self.ledcam_ip2.setScaledContents(True)
+        self.ledcam_ip2.setObjectName("ledcam_ip2")
+        self.ledcam_ip1 = QtWidgets.QLabel(self.groupBox_3)
+        self.ledcam_ip1.setGeometry(QtCore.QRect(395, 30, 20, 20))
+        self.ledcam_ip1.setMinimumSize(QtCore.QSize(20, 20))
+        self.ledcam_ip1.setMaximumSize(QtCore.QSize(20, 20))
+        self.ledcam_ip1.setStyleSheet("color: rgb(255, 255, 255);\n"
 "border: 0px solid;")
-        self.label_7.setText("")
-        self.label_7.setPixmap(QtGui.QPixmap(":/icones/icones/media/led_rouge.png"))
-        self.label_7.setScaledContents(True)
-        self.label_7.setObjectName("label_7")
-        self.label_8 = QtWidgets.QLabel(self.groupBox_3)
-        self.label_8.setGeometry(QtCore.QRect(630, 165, 20, 20))
-        self.label_8.setMinimumSize(QtCore.QSize(20, 20))
-        self.label_8.setMaximumSize(QtCore.QSize(25, 25))
-        self.label_8.setStyleSheet("color: rgb(255, 255, 255);\n"
+        self.ledcam_ip1.setText("")
+        self.ledcam_ip1.setPixmap(QtGui.QPixmap(":/icones/icones/media/led_rouge.png"))
+        self.ledcam_ip1.setScaledContents(True)
+        self.ledcam_ip1.setObjectName("ledcam_ip1")
+        self.ledcam_ip4 = QtWidgets.QLabel(self.groupBox_3)
+        self.ledcam_ip4.setGeometry(QtCore.QRect(395, 141, 20, 20))
+        self.ledcam_ip4.setMinimumSize(QtCore.QSize(20, 20))
+        self.ledcam_ip4.setMaximumSize(QtCore.QSize(20, 20))
+        self.ledcam_ip4.setStyleSheet("color: rgb(255, 255, 255);\n"
 "border: 0px solid;")
-        self.label_8.setText("")
-        self.label_8.setPixmap(QtGui.QPixmap(":/icones/icones/media/led_rouge.png"))
-        self.label_8.setScaledContents(True)
-        self.label_8.setObjectName("label_8")
+        self.ledcam_ip4.setText("")
+        self.ledcam_ip4.setPixmap(QtGui.QPixmap(":/icones/icones/media/led_rouge.png"))
+        self.ledcam_ip4.setScaledContents(True)
+        self.ledcam_ip4.setObjectName("ledcam_ip4")
         self.groupBox_4 = QtWidgets.QGroupBox(self.widget_2)
-        self.groupBox_4.setGeometry(QtCore.QRect(10, 340, 191, 271))
+        self.groupBox_4.setGeometry(QtCore.QRect(10, 285, 161, 266))
         self.groupBox_4.setStyleSheet("border:1px solid rgb(170, 170, 255);\n"
 "border-radius:8px;\n"
 "color: rgb(170, 107, 255);")
         self.groupBox_4.setObjectName("groupBox_4")
         self.verticalLayout_2 = QtWidgets.QVBoxLayout(self.groupBox_4)
-        self.verticalLayout_2.setContentsMargins(20, 15, 20, -1)
+        self.verticalLayout_2.setContentsMargins(17, 25, 17, -1)
         self.verticalLayout_2.setObjectName("verticalLayout_2")
         self.pb_detect_res = QtWidgets.QPushButton(self.groupBox_4)
         self.pb_detect_res.setMinimumSize(QtCore.QSize(35, 34))
@@ -606,6 +660,9 @@ class Ui_Settings(object):
         self.verticalLayout_2.addWidget(self.combo_res)
         self.lbl_infos = QtWidgets.QLabel(self.groupBox_4)
         self.lbl_infos.setMaximumSize(QtCore.QSize(16777215, 32))
+        font = QtGui.QFont()
+        font.setPointSize(8)
+        self.lbl_infos.setFont(font)
         self.lbl_infos.setStyleSheet("color: rgb(255, 255, 255);\n"
 "border-color:transparent;")
         self.lbl_infos.setText("")
@@ -614,7 +671,7 @@ class Ui_Settings(object):
         self.lbl_res = QtWidgets.QLabel(self.groupBox_4)
         self.lbl_res.setMaximumSize(QtCore.QSize(16777215, 32))
         font = QtGui.QFont()
-        font.setPointSize(10)
+        font.setPointSize(8)
         self.lbl_res.setFont(font)
         self.lbl_res.setStyleSheet("color: rgb(255, 255, 255);\n"
 "border-color:transparent;")
@@ -622,37 +679,41 @@ class Ui_Settings(object):
         self.lbl_res.setObjectName("lbl_res")
         self.verticalLayout_2.addWidget(self.lbl_res)
         self.groupBox_5 = QtWidgets.QGroupBox(self.widget_2)
-        self.groupBox_5.setGeometry(QtCore.QRect(890, 5, 261, 606))
+        self.groupBox_5.setGeometry(QtCore.QRect(615, 185, 181, 366))
         self.groupBox_5.setAutoFillBackground(False)
         self.groupBox_5.setStyleSheet("border:1px solid rgb(170, 170, 255);\n"
 "border-radius:8px;\n"
 "color: rgb(170, 107, 255);")
         self.groupBox_5.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignTop)
         self.groupBox_5.setObjectName("groupBox_5")
+        self.verticalLayout_3 = QtWidgets.QVBoxLayout(self.groupBox_5)
+        self.verticalLayout_3.setContentsMargins(-1, 17, -1, -1)
+        self.verticalLayout_3.setSpacing(4)
+        self.verticalLayout_3.setObjectName("verticalLayout_3")
         self.screen_2 = QtWidgets.QLabel(self.groupBox_5)
         self.screen_2.setEnabled(True)
-        self.screen_2.setGeometry(QtCore.QRect(15, 30, 231, 176))
         self.screen_2.setStyleSheet("background-color: rgb(0, 0, 0);")
         self.screen_2.setAlignment(QtCore.Qt.AlignCenter)
         self.screen_2.setObjectName("screen_2")
+        self.verticalLayout_3.addWidget(self.screen_2)
         self.screen_3 = QtWidgets.QLabel(self.groupBox_5)
-        self.screen_3.setGeometry(QtCore.QRect(15, 225, 231, 176))
         self.screen_3.setStyleSheet("background-color: rgb(0, 0, 0);")
         self.screen_3.setAlignment(QtCore.Qt.AlignCenter)
         self.screen_3.setObjectName("screen_3")
+        self.verticalLayout_3.addWidget(self.screen_3)
         self.screen_4 = QtWidgets.QLabel(self.groupBox_5)
-        self.screen_4.setGeometry(QtCore.QRect(15, 415, 231, 176))
         self.screen_4.setStyleSheet("background-color: rgb(0, 0, 0);")
         self.screen_4.setAlignment(QtCore.Qt.AlignCenter)
         self.screen_4.setObjectName("screen_4")
+        self.verticalLayout_3.addWidget(self.screen_4)
         self.groupBox_6 = QtWidgets.QGroupBox(self.widget_2)
-        self.groupBox_6.setGeometry(QtCore.QRect(210, 5, 671, 186))
+        self.groupBox_6.setGeometry(QtCore.QRect(180, 0, 616, 176))
         self.groupBox_6.setStyleSheet("border:1px solid rgb(170, 170, 255);\n"
 "border-radius:8px;\n"
 "color: rgb(170, 107, 255);")
         self.groupBox_6.setObjectName("groupBox_6")
         self.slider_nb_window = QtWidgets.QSlider(self.groupBox_6)
-        self.slider_nb_window.setGeometry(QtCore.QRect(50, 75, 130, 16))
+        self.slider_nb_window.setGeometry(QtCore.QRect(16, 74, 124, 16))
         self.slider_nb_window.setMinimumSize(QtCore.QSize(0, 0))
         self.slider_nb_window.setMaximumSize(QtCore.QSize(180, 16))
         self.slider_nb_window.setStyleSheet("QSlider{\n"
@@ -720,7 +781,7 @@ class Ui_Settings(object):
         self.slider_nb_window.setOrientation(QtCore.Qt.Horizontal)
         self.slider_nb_window.setObjectName("slider_nb_window")
         self.lbl_nb_window = QtWidgets.QLabel(self.groupBox_6)
-        self.lbl_nb_window.setGeometry(QtCore.QRect(50, 45, 121, 17))
+        self.lbl_nb_window.setGeometry(QtCore.QRect(16, 37, 80, 16))
         self.lbl_nb_window.setMaximumSize(QtCore.QSize(16777215, 17))
         font = QtGui.QFont()
         font.setPointSize(9)
@@ -730,11 +791,18 @@ class Ui_Settings(object):
         self.lbl_nb_window.setAlignment(QtCore.Qt.AlignBottom|QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft)
         self.lbl_nb_window.setObjectName("lbl_nb_window")
         self.pb_webcam2 = QtWidgets.QPushButton(self.groupBox_6)
-        self.pb_webcam2.setGeometry(QtCore.QRect(210, 55, 151, 28))
+        self.pb_webcam2.setGeometry(QtCore.QRect(212, 54, 100, 30))
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.pb_webcam2.sizePolicy().hasHeightForWidth())
+        self.pb_webcam2.setSizePolicy(sizePolicy)
+        self.pb_webcam2.setMinimumSize(QtCore.QSize(100, 30))
+        self.pb_webcam2.setMaximumSize(QtCore.QSize(100, 30))
         self.pb_webcam2.setStyleSheet("\n"
 "QPushButton{\n"
 "border:1px solid rgb(170, 170, 255);\n"
-"border-radius:8px;\n"
+"border-radius:4px;\n"
 "color: white;\n"
 "}\n"
 "\n"
@@ -747,11 +815,18 @@ class Ui_Settings(object):
 "}")
         self.pb_webcam2.setObjectName("pb_webcam2")
         self.pb_webcam1 = QtWidgets.QPushButton(self.groupBox_6)
-        self.pb_webcam1.setGeometry(QtCore.QRect(210, 15, 151, 28))
+        self.pb_webcam1.setGeometry(QtCore.QRect(212, 14, 100, 30))
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Expanding)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.pb_webcam1.sizePolicy().hasHeightForWidth())
+        self.pb_webcam1.setSizePolicy(sizePolicy)
+        self.pb_webcam1.setMinimumSize(QtCore.QSize(100, 30))
+        self.pb_webcam1.setMaximumSize(QtCore.QSize(100, 30))
         self.pb_webcam1.setStyleSheet("\n"
 "QPushButton{\n"
 "border:1px solid rgb(170, 170, 255);\n"
-"border-radius:8px;\n"
+"border-radius:4px;\n"
 "color: white;\n"
 "}\n"
 "\n"
@@ -764,11 +839,18 @@ class Ui_Settings(object):
 "}")
         self.pb_webcam1.setObjectName("pb_webcam1")
         self.pb_webcam4 = QtWidgets.QPushButton(self.groupBox_6)
-        self.pb_webcam4.setGeometry(QtCore.QRect(210, 135, 151, 28))
+        self.pb_webcam4.setGeometry(QtCore.QRect(212, 134, 100, 30))
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.pb_webcam4.sizePolicy().hasHeightForWidth())
+        self.pb_webcam4.setSizePolicy(sizePolicy)
+        self.pb_webcam4.setMinimumSize(QtCore.QSize(100, 30))
+        self.pb_webcam4.setMaximumSize(QtCore.QSize(100, 30))
         self.pb_webcam4.setStyleSheet("\n"
 "QPushButton{\n"
 "border:1px solid rgb(170, 170, 255);\n"
-"border-radius:8px;\n"
+"border-radius:4px;\n"
 "color: white;\n"
 "}\n"
 "\n"
@@ -782,11 +864,18 @@ class Ui_Settings(object):
 "}")
         self.pb_webcam4.setObjectName("pb_webcam4")
         self.pb_webcam3 = QtWidgets.QPushButton(self.groupBox_6)
-        self.pb_webcam3.setGeometry(QtCore.QRect(210, 95, 151, 28))
+        self.pb_webcam3.setGeometry(QtCore.QRect(212, 94, 100, 30))
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.pb_webcam3.sizePolicy().hasHeightForWidth())
+        self.pb_webcam3.setSizePolicy(sizePolicy)
+        self.pb_webcam3.setMinimumSize(QtCore.QSize(100, 30))
+        self.pb_webcam3.setMaximumSize(QtCore.QSize(100, 30))
         self.pb_webcam3.setStyleSheet("\n"
 "QPushButton{\n"
 "border:1px solid rgb(170, 170, 255);\n"
-"border-radius:8px;\n"
+"border-radius:4px;\n"
 "color: white;\n"
 "}\n"
 "\n"
@@ -798,90 +887,60 @@ class Ui_Settings(object):
 "background-color: rgb(170, 179, 255);\n"
 "}")
         self.pb_webcam3.setObjectName("pb_webcam3")
-        self.chk_inverse = QtWidgets.QCheckBox(self.groupBox_6)
-        self.chk_inverse.setGeometry(QtCore.QRect(50, 115, 131, 16))
-        self.chk_inverse.setStyleSheet("color: rgb(255, 255, 255);\n"
-"border: 0px solid;")
-        self.chk_inverse.setObjectName("chk_inverse")
         self.screen = QtWidgets.QLabel(self.groupBox_6)
-        self.screen.setGeometry(QtCore.QRect(425, 5, 231, 176))
+        self.screen.setGeometry(QtCore.QRect(380, 5, 226, 166))
         self.screen.setStyleSheet("background-color: rgb(0, 0, 0);")
         self.screen.setAlignment(QtCore.Qt.AlignCenter)
         self.screen.setObjectName("screen")
-        self.label = QtWidgets.QLabel(self.groupBox_6)
-        self.label.setGeometry(QtCore.QRect(375, 20, 20, 20))
-        self.label.setMinimumSize(QtCore.QSize(20, 20))
-        self.label.setMaximumSize(QtCore.QSize(25, 25))
-        self.label.setStyleSheet("color: rgb(255, 255, 255);\n"
+        self.ledcam1 = QtWidgets.QLabel(self.groupBox_6)
+        self.ledcam1.setGeometry(QtCore.QRect(320, 20, 21, 20))
+        self.ledcam1.setMinimumSize(QtCore.QSize(20, 20))
+        self.ledcam1.setMaximumSize(QtCore.QSize(21, 20))
+        self.ledcam1.setStyleSheet("color: rgb(255, 255, 255);\n"
 "border: 0px solid;")
-        self.label.setText("")
-        self.label.setPixmap(QtGui.QPixmap(":/icones/icones/media/led_rouge.png"))
-        self.label.setScaledContents(True)
-        self.label.setObjectName("label")
-        self.label_2 = QtWidgets.QLabel(self.groupBox_6)
-        self.label_2.setGeometry(QtCore.QRect(375, 60, 20, 20))
-        self.label_2.setMinimumSize(QtCore.QSize(20, 20))
-        self.label_2.setMaximumSize(QtCore.QSize(25, 25))
-        self.label_2.setStyleSheet("color: rgb(255, 255, 255);\n"
+        self.ledcam1.setText("")
+        self.ledcam1.setPixmap(QtGui.QPixmap(":/icones/icones/media/led_rouge.png"))
+        self.ledcam1.setScaledContents(True)
+        self.ledcam1.setObjectName("ledcam1")
+        self.ledcam2 = QtWidgets.QLabel(self.groupBox_6)
+        self.ledcam2.setGeometry(QtCore.QRect(320, 59, 20, 20))
+        self.ledcam2.setMinimumSize(QtCore.QSize(20, 20))
+        self.ledcam2.setMaximumSize(QtCore.QSize(20, 20))
+        self.ledcam2.setStyleSheet("color: rgb(255, 255, 255);\n"
 "border: 0px solid;")
-        self.label_2.setText("")
-        self.label_2.setPixmap(QtGui.QPixmap(":/icones/icones/media/led_rouge.png"))
-        self.label_2.setScaledContents(True)
-        self.label_2.setObjectName("label_2")
-        self.label_3 = QtWidgets.QLabel(self.groupBox_6)
-        self.label_3.setGeometry(QtCore.QRect(375, 100, 20, 20))
-        self.label_3.setMinimumSize(QtCore.QSize(20, 20))
-        self.label_3.setMaximumSize(QtCore.QSize(25, 25))
-        self.label_3.setStyleSheet("color: rgb(255, 255, 255);\n"
+        self.ledcam2.setText("")
+        self.ledcam2.setPixmap(QtGui.QPixmap(":/icones/icones/media/led_rouge.png"))
+        self.ledcam2.setScaledContents(True)
+        self.ledcam2.setObjectName("ledcam2")
+        self.ledcam3 = QtWidgets.QLabel(self.groupBox_6)
+        self.ledcam3.setGeometry(QtCore.QRect(320, 99, 20, 20))
+        self.ledcam3.setMinimumSize(QtCore.QSize(20, 20))
+        self.ledcam3.setMaximumSize(QtCore.QSize(20, 20))
+        self.ledcam3.setStyleSheet("color: rgb(255, 255, 255);\n"
 "border: 0px solid;")
-        self.label_3.setText("")
-        self.label_3.setPixmap(QtGui.QPixmap(":/icones/icones/media/led_rouge.png"))
-        self.label_3.setScaledContents(True)
-        self.label_3.setObjectName("label_3")
-        self.label_4 = QtWidgets.QLabel(self.groupBox_6)
-        self.label_4.setGeometry(QtCore.QRect(375, 140, 20, 20))
-        self.label_4.setMinimumSize(QtCore.QSize(20, 20))
-        self.label_4.setMaximumSize(QtCore.QSize(25, 25))
-        self.label_4.setStyleSheet("color: rgb(255, 255, 255);\n"
+        self.ledcam3.setText("")
+        self.ledcam3.setPixmap(QtGui.QPixmap(":/icones/icones/media/led_rouge.png"))
+        self.ledcam3.setScaledContents(True)
+        self.ledcam3.setObjectName("ledcam3")
+        self.ledcam4 = QtWidgets.QLabel(self.groupBox_6)
+        self.ledcam4.setGeometry(QtCore.QRect(320, 139, 20, 20))
+        self.ledcam4.setMinimumSize(QtCore.QSize(20, 20))
+        self.ledcam4.setMaximumSize(QtCore.QSize(20, 20))
+        self.ledcam4.setStyleSheet("color: rgb(255, 255, 255);\n"
 "border: 0px solid;")
-        self.label_4.setText("")
-        self.label_4.setPixmap(QtGui.QPixmap(":/icones/icones/media/led_rouge.png"))
-        self.label_4.setScaledContents(True)
-        self.label_4.setObjectName("label_4")
+        self.ledcam4.setText("")
+        self.ledcam4.setPixmap(QtGui.QPixmap(":/icones/icones/media/led_rouge.png"))
+        self.ledcam4.setScaledContents(True)
+        self.ledcam4.setObjectName("ledcam4")
         self.layoutWidget = QtWidgets.QWidget(self.widget_2)
-        self.layoutWidget.setGeometry(QtCore.QRect(10, 625, 1076, 37))
+        self.layoutWidget.setGeometry(QtCore.QRect(5, 555, 801, 41))
         self.layoutWidget.setObjectName("layoutWidget")
         self.gridLayout = QtWidgets.QGridLayout(self.layoutWidget)
         self.gridLayout.setContentsMargins(0, 0, 0, 0)
-        self.gridLayout.setHorizontalSpacing(11)
+        self.gridLayout.setSpacing(0)
         self.gridLayout.setObjectName("gridLayout")
-        self.pb_apply = QtWidgets.QPushButton(self.layoutWidget)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Fixed)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.pb_apply.sizePolicy().hasHeightForWidth())
-        self.pb_apply.setSizePolicy(sizePolicy)
-        self.pb_apply.setMinimumSize(QtCore.QSize(45, 35))
-        self.pb_apply.setStyleSheet("\n"
-"QPushButton{\n"
-"border:1px solid rgb(170, 170, 255);\n"
-"border-radius:8px;\n"
-"color: white;\n"
-"}\n"
-"\n"
-"QPushButton:hover{\n"
-"border-color: white;\n"
-"}\n"
-"\n"
-"QPushButton:pressed{\n"
-"background-color: rgb(170, 179, 255);\n"
-"}")
-        self.pb_apply.setObjectName("pb_apply")
-        self.gridLayout.addWidget(self.pb_apply, 0, 1, 1, 1)
         spacerItem = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
-        self.gridLayout.addItem(spacerItem, 0, 0, 1, 1)
-        spacerItem1 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
-        self.gridLayout.addItem(spacerItem1, 0, 4, 1, 1)
+        self.gridLayout.addItem(spacerItem, 0, 2, 1, 1)
         self.pb_cancel = QtWidgets.QPushButton(self.layoutWidget)
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Fixed)
         sizePolicy.setHorizontalStretch(0)
@@ -905,8 +964,33 @@ class Ui_Settings(object):
 "}")
         self.pb_cancel.setObjectName("pb_cancel")
         self.gridLayout.addWidget(self.pb_cancel, 0, 3, 1, 1)
+        self.pb_apply = QtWidgets.QPushButton(self.layoutWidget)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Fixed)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.pb_apply.sizePolicy().hasHeightForWidth())
+        self.pb_apply.setSizePolicy(sizePolicy)
+        self.pb_apply.setMinimumSize(QtCore.QSize(45, 35))
+        self.pb_apply.setStyleSheet("\n"
+"QPushButton{\n"
+"border:1px solid rgb(170, 170, 255);\n"
+"border-radius:8px;\n"
+"color: white;\n"
+"}\n"
+"\n"
+"QPushButton:hover{\n"
+"border-color: white;\n"
+"}\n"
+"\n"
+"QPushButton:pressed{\n"
+"background-color: rgb(170, 179, 255);\n"
+"}")
+        self.pb_apply.setObjectName("pb_apply")
+        self.gridLayout.addWidget(self.pb_apply, 0, 1, 1, 1)
+        spacerItem1 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
+        self.gridLayout.addItem(spacerItem1, 0, 0, 1, 1)
         spacerItem2 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
-        self.gridLayout.addItem(spacerItem2, 0, 2, 1, 1)
+        self.gridLayout.addItem(spacerItem2, 0, 4, 1, 1)
         self.verticalLayout.addWidget(self.widget_2)
         self.horizontalLayout.addWidget(self.frame)
         Settings.setCentralWidget(self.centralwidget)
@@ -924,6 +1008,7 @@ class Ui_Settings(object):
         self.lbl_saturation.setText(_translate("Settings", "<html><head/><body><p>Saturation :   <span style=\" color:#aaaaff;\">0</span></p></body></html>"))
         self.lbl_contraste.setText(_translate("Settings", "<html><head/><body><p>Contraste : <span style=\" color:#aaaaff;\">0</span></p></body></html>"))
         self.lbl_brillance.setText(_translate("Settings", "<html><head/><body><p>Brillance  : <span style=\" color:#aaaaff;\">0</span></p></body></html>"))
+        self.chk_inverse.setText(_translate("Settings", "Inverser l\'écran"))
         self.groupBox_2.setTitle(_translate("Settings", "Fichiers et répertoires"))
         self.pb_dir_image.setText(_translate("Settings", "Chemin images"))
         self.pb_dir_video.setText(_translate("Settings", "Chemin vidéos"))
@@ -948,10 +1033,9 @@ class Ui_Settings(object):
         self.pb_webcam1.setText(_translate("Settings", "webcam1"))
         self.pb_webcam4.setText(_translate("Settings", "webcam4"))
         self.pb_webcam3.setText(_translate("Settings", "webcam3"))
-        self.chk_inverse.setText(_translate("Settings", "Inverser l\'écran"))
         self.screen.setText(_translate("Settings", "webcam1"))
-        self.pb_apply.setText(_translate("Settings", "Appliquer"))
         self.pb_cancel.setText(_translate("Settings", "Annuler"))
+        self.pb_apply.setText(_translate("Settings", "Appliquer"))
 import webcam_rc
 
 
